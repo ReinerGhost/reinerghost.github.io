@@ -1,0 +1,133 @@
+﻿
+.home-cleaning .logo {
+    width: 46px;
+    position: absolute;
+    top: -23px;
+    left: -23px;
+}
+.home-cleaning {
+    background: url('../../img/background.jpg');
+    background-size: auto 100%;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+	min-height: 100vh;
+    min-height: calc(100vh - 10px);
+    padding: 0 15px;
+    padding-bottom: 10px;
+}
+.home-cleaning h2 {
+    margin: 0;
+    padding: 1em;
+    position: relative;
+}
+.home-cleaning form {
+    background: #FCFCFC;
+    color: #9B9B9B;
+    position: relative;
+}
+
+.home-cleaning .form-row {
+    padding: 15px 0;
+    display: block;
+    box-sizing: border-box;
+}
+.home-cleaning .form-row-name {
+    padding: 1px 0;
+}
+.home-cleaning .form-row-value {
+
+}
+
+.home-cleaning .not-requered {
+
+}
+
+.home-cleaning .not-requered .form-row-name {
+    font-size: 12px;
+    color: #A0A0A0;
+}
+/*
+.wash-fold-form-second-step .form-row-name {
+    color: #313131;
+}
+*/
+
+
+.home-cleaning-buttons {
+    width: 100%; 
+    padding: 10px 0;
+    border-bottom: 4px #0087E5 solid;
+}
+.home-cleaning .sum {
+    padding: 10px 0 15px 0;
+    color: #333333;
+    font-size: 20px;
+}
+.home-cleaning .chois-number-input {
+    font-size: 20px;
+}
+.home-cleaning .chois-number-input .chois-number-input-value {
+    color: #333333;
+}
+.home-cleaning .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.home-cleaning .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.home-cleaning .selected-items-body input {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.home-cleaning .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.home-cleaning .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.home-cleaning .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.home-cleaning .chois-number {
+    width:100%;
+}
+
+
+.home-cleaning .chois-number_left-side {
+    width: 33%;
+    text-align: right;
+    float: left;
+}
+.home-cleaning .chois-number_right-side {
+    width: 33%;
+    text-align: left;
+    float: left;
+}
+.home-cleaning .chois-number_center-side {
+    width: 33%;
+    float: left;
+}
+.home-cleaning .chois-number_center-side input[type="number"]{
+    background: none;
+    width: 45px;
+    border-bottom: 0px;
+}

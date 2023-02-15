@@ -1,0 +1,57 @@
+﻿.login-bg .logo {
+    margin: 64px auto 8px;
+}
+.logo-div {
+    text-align: right;
+}
+.login h4 {
+    text-align: left;
+    font-size: 28px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+    font-size: 8vw;
+}
+.login {
+    /* background: url('../../img/background.jpg'); */
+    background-size: auto 110%;
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+    min-height: 500px;
+	min-height: 100%;
+	min-height: 100vh;
+    min-height: calc(100vh - 10px);
+    overflow: auto;
+    box-sizing: border-box;
+}
+.login-button {
+    margin: 8px 0 0px;
+}
+.login .form-row {
+    padding: 15px 0;
+    display: block;
+    box-sizing: border-box;
+}
+.login .from-row-name {
+    padding: 5px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.login .from-row-value {
+
+}
+.login-bottom-buttons {
+    width: 83%;
+    width:calc(100% - 60px);
+    padding: 10px 0;
+    /* border-bottom: 2px #0087E5 solid; */
+    position: absolute;
+    bottom: 10px;
+    box-sizing: border-box;
+}
+.how {
+     text-align: center;
+     text-decoration: underline;
+     font-weight: bold;
+}

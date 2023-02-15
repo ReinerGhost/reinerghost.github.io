@@ -1,0 +1,40 @@
+﻿
+<div class="order-history-page-bg">
+    <div class="order-history-page steps-section">
+
+        <a href="#/login" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+
+        <div class="text-left">
+            <h2>Order History</h2>
+        </div>
+
+        <div>
+            <table class="table" width="100%">
+                <% if(typeof OrderHistory != 'undefined') { %>
+                    <% for(var i in OrderHistory) { %>
+                    <tr <% if (OrderHistory[i]['status_name'] != 'canceled' && OrderHistory[i]['status_name'] != 'on hold' && OrderHistory[i]['status_name'] != 'canceled late') { %>
+                        class="not-canceled"
+                        <% } else { %>
+                        class="canceled"
+                        <% }  %>
+                    >
+                        <td>
+                            <a href="javascript:void(0);" onclick="clickOnOrderDetailsLink(<% echo(OrderHistory[i]['id']) %>, '<% echo(OrderHistory[i]['token']) %>',  '#/orderDetails')">
+                                <div class="date"><% echo(OrderHistory[i]['date']) %></div>
+                                <div class="status"><!-- (ID: <% echo(OrderHistory[i]['id']) %>) -->&nbsp;</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0);" onclick="clickOnOrderDetailsLink(<% echo(OrderHistory[i]['id']) %>, '<% echo(OrderHistory[i]['token']) %>', '#/orderDetails')">
+                                <div class="service-name"><% echo(OrderHistory[i]['service_name']) %></div>
+                                <div class="status"><% echo(OrderHistory[i]['status_name']) %></div>
+                            </a>
+                        </td>
+                    </tr>
+                    <% } %>
+                <% } %>
+            </table>
+        </div>
+
+    </div>
+</div>

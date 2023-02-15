@@ -1,0 +1,104 @@
+﻿
+.raing-bg .logo {
+    margin: 10px 0;
+}
+.raing {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+    min-height: 500px;
+    min-height: calc(100vh - 30px);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.raing h2 {
+    margin:0;
+    padding: 5px;
+}
+.raing-bg {
+    /*background: url('../../img/background.jpg');*/
+    background-size: auto 110%;
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.raing-button {
+
+}
+.raing textarea {
+    width: 100%;
+}
+.raing .form-row {
+    padding: 10px 0;
+    display: block;
+    box-sizing: border-box;
+}
+.raing .form-row-name {
+    padding: 5px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.raing .from-row-value {
+
+}
+.raing-bottom-buttons {
+    width: 100%; 
+    padding: 10px 0;
+    border-bottom: 2px #0087E5 solid;
+}
+.raing .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.raing .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.raing .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.raing .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.raing .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+
+.raing_stars {
+  background-color: #e0e0e0;
+  width: 157px;
+  height: 27px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+}
+.raing_stars-bg {
+  background-image: url('../../img/stars.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 157px;
+  height: 27px;
+  position: absolute;
+  z-index: 2;
+}
+.raing_stars-info {
+  background: #86a41e;
+  height: 100%;
+  position: absolute;
+}

@@ -1,0 +1,55 @@
+﻿.rewards-page h2 {
+    margin: 0;
+}
+.rewards-page {
+    /* background: url('../../img/background.jpg'); */
+    background-size: auto 100%;
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 10px);
+    padding: 0 17px;
+    padding-top: 15%;
+}
+
+.rewards-page .list-points-big-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.rewards-page .free-same-day, .rewards-page .list-points-small-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.rewards-page .current-level-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 31px;
+    text-align: center;
+}
+
+.rewards-page .current-level {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.rewards-page .next-level {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 62px;
+}

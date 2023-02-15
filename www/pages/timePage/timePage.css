@@ -1,0 +1,178 @@
+﻿.time-page {
+    /* background: url('../../img/background.jpg'); */
+    background-size: auto 100%;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
+    min-height: calc(100vh - 10px);
+    padding: 16px 15px;
+}
+.btn-back {
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    left: 8px;
+    top: 12px;
+}
+.time-page h2 {
+    padding-top: 24px;
+    position: relative;
+}
+
+.time-page .form-row {
+    padding: 0 0 15px 0;
+    display: block;
+    box-sizing: border-box;
+}
+.time-page .form-row-name {
+    padding: 4px 0;
+    text-align: left;
+}
+.time-page .form-row-value {
+
+}
+
+.time-page .not-requered {
+
+}
+
+.time-page .not-requered .form-row-name {
+    font-size: 12px;
+    color: #A0A0A0;
+}
+
+.time-page-form {
+    min-height: 350px;
+    min-height: calc(100vh - 210px);
+}
+
+.time-page-form .form-row-name {
+    padding: 4px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.time-page-buttons {
+    width: 100%;
+    padding: 10px 0;
+    /* border-bottom: 4px #0087E5 solid; */
+}
+.time-page .sum {
+    padding: 10px 0 15px 0;
+    color: #333333;
+    font-size: 20px;
+}
+.time-page .chois-number-input {
+    font-size: 20px;
+}
+.time-page .chois-number-input .chois-number-input-value {
+    color: #333333;
+}
+.time-page .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.time-page .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.time-page .selected-items-body input {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.time-page .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.time-page .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.time-page .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.time-page .chois-number {
+    width:100%;
+}
+
+.time-page-form .selected-items {
+    padding: 0 5px;
+}
+
+.time-page-form .selected-items-body .selected-items-text {
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+.time-page-form .selected-items i {
+    display: none;
+}
+
+.time-page-form .selected-items-text {
+    background: white;
+    background: url('../../img/textarea.png?12345');
+    background-size: 100% 30px;
+    height: 30px;
+}
+
+.time-page .chois-number_left-side {
+    width: 33%;
+    text-align: right;
+    float: left;
+}
+.time-page .chois-number_right-side {
+    width: 33%;
+    text-align: left;
+    float: left;
+}
+.time-page .chois-number_center-side {
+    width: 33%;
+    float: left;
+}
+.time-page .chois-number_center-side input[type="number"]{
+    background: none;
+    width: 45px;
+    border-bottom: 0px;
+}
+.first-select {
+    padding-right: 8px;
+}
+.first-second {
+    padding-left: 8px;
+}
+.time-page .liox-select {
+    padding: 16px 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+.hide {
+    display:none !important;
+}
+
+.time-page .same-day-select-date {
+    font-size: 13px;
+    line-height: 100%;
+    color: #AAAAAA;
+    position: absolute;
+    right: 27px;
+    top: 37%;
+    pointer-events: none;
+}
+

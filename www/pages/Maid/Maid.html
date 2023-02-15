@@ -1,0 +1,168 @@
+
+<div class="maid-bg">
+    <div class="maid">
+        <a href="#/menuPage" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2>HOME CLEANING</h2>
+        </div>
+        <!--First form-->
+        <form class="maid-form-first-step">
+            <!--<img src="img/logo.png" class="logo" />-->
+            <div class="form-row">
+                <div class="form-label">bedrooms</div>
+                <div class="form-value sub">
+                    <select name="bedrooms" id="bedrooms" class="liox-select">
+                        <option value="0">STUDIO</option>
+                        <option value="1">1 BEDROOM</option>
+                        <option value="2">2 BEDROOMS</option>
+                        <option value="3">3 BEDROOMS</option>
+                        <option value="4">4 BEDROOMS</option>
+                        <option value="5">5 BEDROOMS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">
+                    bathrooms
+                </div>
+                <div class="form-value">
+                    <select name="bathrooms" id="bathrooms" class="liox-select">
+                        <option value="1">1 BATHROOM</option>
+                        <option value="2">2 BATHROOMS</option>
+                        <option value="3">3 BATHROOMS</option>
+                        <option value="4">4 BATHROOMS</option>
+                        <option value="5">5 BATHROOMS</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="too-col-label">
+                <label class="form-row col-6 label-bleach">
+                    <!-- <input type="checkbox" id="checkbox_bleach" name="bleach">
+                    <label class="btn-liox btn-select" for="checkbox_bleach">
+                        Bleach
+                    </label> -->
+                    <div class="form-row-name">
+                        Cleaning Type
+                    </div>
+                    <div class="my-custom-select">
+                        <div class="my-custom-select-sub">
+                    <select name="clean_type" id="clean_type" class="liox-select">
+                        <option value="0">STANDARD</option>
+                        <option value="1">PREMIUM</option>
+                        <option value="2">DEEP CLEAN</option>
+                        <option value="3">MOVE IN/OUT</option>
+                    </select>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="form-row-value">
+                        <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text">NONE</span><i></i>
+                            </div>
+                            <select name="bleach">
+                                <option value="NONE">NONE</option>
+                                <option value="YES">YES</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </label>
+                <label class="form-row col-6 label-extra-bag">
+                    <!-- <input type="checkbox" id="checkbox_extra_bag" name="extra_bag">
+                    <label class="btn-liox btn-select" for="checkbox_extra_bag">
+                        Extra Bag
+                    </label> -->
+                    <div class="form-row-name">
+                        Subscription
+                    </div>
+                    <div class="my-custom-select">
+                        <div class="my-custom-select-sub">
+                    <select name="frequency" id="frequency" class="liox-select">
+                        <option value="1">ONE TIME</option>
+                        <option value="2">EVERY 4 WEEKS</option>
+                        <option value="3" selected>EVERY 2 WEEKS</option>
+                        <option value="4">WEEKLY</option>
+                    </select>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="form-row-value">
+                        <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text">NONE</span><i></i>
+                            </div>
+                            <select name="extra_bag">
+                                <option value="NONE">NONE</option>
+                                <option value="YES">YES</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </label>
+                <div class="clear"></div>
+            </div>
+            <div class="too-col-label" style="padding-top: 10px;">
+                <div class="form-row-name">
+                    Extras
+                </div>
+                <label class="form-row2 col-4" style="padding: 0 0 15px 0;">
+                    <span name="extras_1" id="extras_1" class="liox-radio extras-button" style="margin: 0 10px 10px 0;"  data="1">INSIDE FRIDGE</span>
+                    <input type="hidden" name="extras_var_1" id="extras_var_1" value="0">
+                </label>
+                <label class="form-row2 col-4" style="padding: 0 0 15px 0;">
+                    <span name="extras_2" id="extras_2" class="liox-radio extras-button" style="width: calc(100% - 20px); margin: 0 10px 10px 10px;"  data="2">INSIDE OVEN</span>
+                    <input type="hidden" name="extras_var_2" id="extras_var_2" value="0">
+                </label>
+                <label class="form-row2 col-4" style="padding: 0 0 15px 0;">
+                    <span name="extras_3" id="extras_3" class="liox-radio extras-button" style="margin: 0px 0px 10px 10px;" data="3">INSIDE CABINETS</span>
+                    <input type="hidden" name="extras_var_3" id="extras_var_3" value="0">
+                </label>
+                <div class="clear"></div>
+            </div>
+            <label class="form-row" style="padding-top: 4px;">
+                <div class="form-row-name text-center" style="padding-bottom: 6px;">
+                    Tips
+                </div>
+                <div class="form-row-value">
+                    <div class="chois-number">
+                        <div class="chois-number_left-side">
+                            <div class="minus">&#45;</div>
+                            <!-- <img src="img/minus.png" class="width50 minus" /> -->
+                        </div>
+                        <div class="chois-number_center-side">
+                            <div class="chois-number-input">
+                                <% if(typeof Settings.home_cleaning_default_tips !='undefined' && Settings.home_cleaning_default_tips > 0) { %>
+                                <input type="hidden" name="tips" id="tips" value="<% echo(Settings.home_cleaning_default_tips);%>" class="chois-number-input-real-value" />
+                                $ <span class="chois-number-input-value"><% echo(Settings.home_cleaning_default_tips);%></span>
+                                <% } else { %>
+                                <input type="hidden" name="tips" id="tips" value="20" class="chois-number-input-real-value" />
+                                $ <span class="chois-number-input-value">20</span>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="chois-number_right-side">
+                            <div class="plus">&#43;</div>
+                            <!-- <img src="img/plus.png" class="width50 plus" /> -->
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </label>
+            <div class="sum">
+                <span class="sum-title">Estimated Total: $</span>
+                <span class="sum-body" id="sum-body">90</span>
+            </div>
+            <% if(typeof User.store_credit !='undefined' && User.store_credit > 0) { %>
+            <div class="col-12">
+                <div class="form-row-name credit-info-row">
+                    Credit: $<% echo(User.store_credit);%>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <% } %>
+        </form>
+        <div class="first-step">
+            <button class="btn-liox btn-fill second-step">Booking Time</button>
+        </div>
+    </div>
+</div>

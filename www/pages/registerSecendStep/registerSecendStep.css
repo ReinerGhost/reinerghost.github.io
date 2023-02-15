@@ -1,0 +1,88 @@
+﻿
+.register-second-step-bg .logo {
+    margin: 15px 0;
+}
+.register-second-step {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+    min-height: 400px;
+    min-height: calc(85vh - 30px);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.register-second-step-bg {
+    /*background: url('../../img/background.jpg');*/
+    background-size: auto 110%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.register-second-step input {
+    background: none;
+    max-width:100%;
+    width: 360px;
+    height: 40px;
+    border: 1px solid #bbb;
+    box-shadow: inset 0px 0px 2px 0px #ececec;
+}
+.register-second-step-button {
+    margin: 15px 0;
+}
+.register-second-step .form-row {
+    width: 100%;
+    padding: 15px 0;
+    text-align: left;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+}
+.register-second-step .from-row-name {
+    padding: 5px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.register-second-step .from-row-value {
+    width:100%;
+}
+.register-second-step-bottom-buttons {
+    width: 100%; 
+    padding: 10px 0;
+    border-bottom: 2px #0087E5 solid;
+}
+.register-second-step .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.register-second-step .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.register-second-step .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.register-second-step .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.register-second-step .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.register-second-step-error {
+    color: red;
+}

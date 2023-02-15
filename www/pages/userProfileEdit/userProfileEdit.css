@@ -1,0 +1,115 @@
+﻿
+.user-profile-edit-bg .logo {
+    margin: 15px 0;
+}
+.user-profile-edit {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    /* padding: 0 30px; */
+    min-height: calc( 100vh - 200px );
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.user-profile-edit-sec-bg {
+    /*background: url('../../img/background.jpg');*/
+    background-size: auto 110%;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.btn-back {
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    left: 8px;
+    top: 12px;
+}
+.user-profile-edit-sec-bg h2 {
+    padding-top: 24px;
+    position: relative;
+}
+.user-profile-edit .form-row {
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 0;
+    text-align: left;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+}
+.user-profile-edit .col-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.user-profile-edit .from-row-name {
+    padding: 5px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.user-profile-edit-bottom-buttons {
+    width: 100%; 
+    padding: 10px 0;
+    /* border-bottom: 2px #0087E5 solid; */
+}
+.user-profile-edit .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.user-profile-edit .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.user-profile-edit .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.user-profile-edit .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.user-profile-edit .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.user-profile-edit .cartnumber-body {
+    position: relative;
+    text-align: center;
+}
+.user-profile-edit .cartnumber-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.user-profile-edit .cartnumber-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.user-profile-edit .cartnumber-body input {
+    background: white;
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.user-profile-edit input:focus {
+    opacity:1;
+}

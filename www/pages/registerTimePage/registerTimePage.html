@@ -1,0 +1,94 @@
+
+<div class="register-time-page-bg">
+    <div class="register-time-page">
+        <a href="#/<% echo(goBack); %>" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <%
+                if(globalData['goBack'] == 'registerMaid') {echo('<h2>Time and Address</h2>');} else { echo('<h2>Pick Up & Drop Off</h2>'); }
+            %>
+        </div>
+        <!--Second form-->
+        <form class="register-time-page-form">
+            <div class="form-row">
+                <div class="form-label">
+                    <%
+                    if(globalData['goBack'] == 'registerMaid') {echo('starting');} else { echo('pickup date'); }
+                    %>
+                </div>
+                <div class="form-value sub">
+                    <select name="day-start" class="liox-select liox-select-day-start">
+                        <%
+                        for(var i in PickUp) echo('<option value="'+i+'">'+PickUp[i]["day_info"]["text"]+'</option>');
+                        %>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">
+                    <%
+                    if(globalData['goBack'] == 'registerMaid') {echo('starting');} else { echo('pickup time'); }
+                    %>
+                </div>
+                <div class="form-value sub">
+                    <select name="time-start" class="liox-select  liox-select-time-start">
+                        <%
+                        for(var i in PickUp[0]["work_times"]) {
+                        echo('<option value="'+PickUp[0]["day_info"]["value"]+' '+PickUp[0]["work_times"][i]["value"]+'">'+PickUp[0]["work_times"][i]["text"]+'</option>');
+                        }
+                        %>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-row <% if(globalData['goBack'] == 'registerMaid') {echo('hide');} %>">
+                <div class="form-label">
+                    dropoff date
+                </div>
+                <div class="form-value sub">
+                    <select name="day-end" class="liox-select liox-select-day-end">
+                        <%
+                        for(var i in DropOff) echo('<option value="'+i+'">'+DropOff[i]["day_info"]["text"]+'</option>');
+                        %>
+                    </select>
+                    <span class="same-day-select-date">+$8 Same Day</span>
+                </div>
+
+            </div>
+
+            <div class="form-row <% if(globalData['goBack'] == 'registerMaid') {echo('hide');} %>">
+                <div class="form-label">
+                    dropoff date
+                </div>
+                <div class="form-value sub">
+                    <select name="time-end" class="liox-select liox-select-time-end">
+                        <%
+                        for(var i in DropOff[0]["work_times"]) {
+                        echo('<option value="'+DropOff[0]["day_info"]["value"]+' '+DropOff[0]["work_times"][i]["value"]+' ">'+DropOff[0]["work_times"][i]["text"]+'</option>');
+                        }
+                        %>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-label">
+                    recurring orders
+                </div>
+                <div class="form-value sub">
+                    <select name="time-end" class="liox-select liox-select-time-end">
+                        <option value="One Time">One Time</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Every 2 Weeks">Every 2 Weeks</option>
+                        <option value="Every 4 Weeks">Every 4 Weeks</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </form>
+        <div id="address-btn" class="register-time-page-buttons first-step">
+            <a href="#/registerAccountAdress" class="btn-liox btn-fill step-end">Next</a>
+        </div>
+    </div>
+</div>

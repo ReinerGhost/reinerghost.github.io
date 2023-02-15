@@ -1,0 +1,164 @@
+﻿
+<div class="lastOrder-page-bg">
+    <div class="lastOrder-page">
+        <h2>LAST ORDER</h2>
+        <div class="lastOrder-page-inf">
+            <label class="form-row">
+                <div class="form-row-name">
+                    DETAILS
+                </div>
+                <div class="form-row-value">
+                    <% if(typeof data != 'undefined') { %>
+                        <% for(var i in data) { %>
+                            <% if(data[i]['value'] != 0 && data[i]['name'] != 'tips' && data[i]['value'] != null){ %>
+                                <div class="width50 float-left text-left"><% echo(data[i]['text'])%></div>
+                                <% if(typeof data[i]['value'] != 'object' ) {%>
+                                <div class="width50 float-left text-right"><%
+                                                                  if(data[i]['text'].includes('Bedrooms') && data[i]['value'] == 0){
+                                                                      echo('Studio');
+                                                                  } else if(data[i]['text'].includes("Subscription")){
+                                                                      if(data[i]['value'] == 1){
+                                                                        echo('One Time');
+                                                                      } else if(data[i]['value'] == 2){
+                                                                        echo('Every 4 Weeks');
+                                                                      } else if(data[i]['value'] == 3){
+                                                                        echo('Every 2 Weeks');
+                                                                      } else if(data[i]['value'] == 4){
+                                                                        echo('Weekly');
+                                                                      }
+
+                                                                  } else if(data[i]['text'].includes("Cleaning Type")){
+                                                                      if(data[i]['value'] == 0){
+                                                                        echo('Standard');
+                                                                      } else if(data[i]['value'] == 1){
+                                                                        echo('Premium');
+                                                                      } else if(data[i]['value'] == 2){
+                                                                        echo('Deep');
+                                                                      } else if(data[i]['value'] == 3){
+                                                                        echo('Move In/Out');
+                                                                      }
+                                                                  } else {
+
+                                                                      echo(data[i]['value']);
+                                                                  }
+                                                                %></div>
+                                <% } else if(data[i]['value'] != null && data[i]['value'].length > 0) {%>
+                                <div class="width50 float-left text-right">
+                                    <% for(var z in data[i]['value']){ %>
+                                    <% echo(data[i]['value'][z])%>
+                                    <% } %>
+                                </div>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </label>
+            <% if(typeof data_time_info != 'undefined') { %>
+            <label class="form-row">
+                <div class="form-row-name">
+                    <% echo(data_time_info['pickup-title']); %>
+                </div>
+                <div class="form-row-value">
+                    <div class="width30 float-left text-left"><% echo(data_time_info['pickup-day']); %></div>
+                    <div class="width70 float-left text-right"><% echo(data_time_info['pickup-time']); %></div>
+                </div>
+                <div class="clear"></div>
+            </label>
+            <% } %>
+            <% if(typeof data_time_info != 'undefined' && typeof data_time_info['dropoff'] == 'string') { %>
+            <label class="form-row <%
+                                      if(goBack == 'Maid'){echo('hide');}
+                                    %>">
+                <div class="form-row-name">
+                    <% echo(data_time_info['dropoff-title']); %>
+                </div>
+                <div class="form-row-value">
+                    <div class="width30 float-left text-left"><% echo(data_time_info['dropoff-day']); %></div>
+                    <div class="width70 float-left text-right"><% echo(data_time_info['dropoff-time']); %></div>
+                </div>
+                <div class="clear"></div>
+            </label>
+            <% } %>
+            <label class="form-row">
+                <div class="form-row-name">
+                    INSTRUCTIONS
+                </div>
+                <div class="form-row-value">
+                    <% if(typeof data_time_info != 'undefined') { %>
+                    <%
+                    if(data_time_info['instruction'].length>0) echo(data_time_info['instruction']);
+                    else echo('<span class="not-requered">not used</span>');
+                    %>
+                    <% } %>
+                </div>
+                <div class="clear"></div>
+            </label>
+            <% if(typeof wash_status != 'undefined') { %>
+            <label class="form-row">
+                <div class="form-row-name">
+                    STATUS
+                </div>
+                <div class="form-row-value">
+                    <%
+                    echo(wash_status);
+                    %>
+                </div>
+                <div class="clear"></div>
+            </label>
+             <% } %>
+            <label class="form-row" style="margin:0;">
+                <div class="form-row-name none">
+                    TIPS
+                </div>
+                <div class="form-row-value" style="margin:0;">
+                    <% if(typeof data != 'undefined') { %>
+                    <% for(var i in data) { %>
+                    <% if(data[i]['name'] == 'tips'){ %>
+                    <div class="sum" style="font-size: 18px; padding: 0;">
+                        <span class="sum-title">TIPS:$ </span>
+                        <span class="sum-body"><% echo(data[i]['value'])%></span>
+                    </div>
+                    <% } %>
+                    <% } %>
+                    <% } %>
+                </div>
+                <div class="clear"></div>
+            </label>
+            <% if(typeof total != 'undefined') { %>
+            <div class="sum">
+                <% if(goBack == 'washFold') { %>
+                <span class="sum-title">TOTAL: $</span>
+                <span class="sum-body">
+                    <% if(typeof total != 'undefined') { %>
+                    1.79 /lb (min <% echo(total); %>)
+                    <% } %>
+                </span>
+                <% } else { %>
+                <span class="sum-title">TOTAL: $</span>
+                <span class="sum-body">
+                    <% if(typeof total != 'undefined') { %>
+                    <% echo(total); %>
+                    <% } %>
+                </span>
+                <% } %>
+            </div>
+            <% } %>
+            <div class="description">
+                <% if(goBack == 'washFold') { %>
+                weight will be measured on arrival, minimum $35 not including tips, same day/rush fee and additional items like comforters, blankets, pillows and hang dry
+                <% } else if(goBack == 'dryCleaning') { %>
+                listed price is general and may increase based on items that require additional attention or extra long/heavy, items not listed here will also be added to the extra charge
+                <% } else if(goBack == 'homeCleaning') { %>
+                once submitted, you reserve listed time for home cleaning, no extra confirmations required, we will only contact you in case this window is already taken
+                <% } %>
+            </div>
+        </div>
+        <div class="lastOrder-page-buttons onFocusHide">
+            <a href="#/menuPage" class="btn-liox btn-fill step-back">Home</a>
+            <!--<a href="#/menuPage"><img src="img/home.png" class="width70 step-back" /></a>-->
+        </div>
+    </div>
+</div>

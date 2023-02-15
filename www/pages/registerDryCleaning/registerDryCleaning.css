@@ -1,0 +1,220 @@
+﻿h2, h1{
+    font-size: 8vw;
+}
+.register-dry-cleaning .logo {
+    width: 46px;
+    position: absolute;
+    top: -23px;
+    left: -23px;
+}
+.register-dry-cleaning {
+    /* background: url('../../img/background.jpg'); */
+    /* background-size: auto 100%; */
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+	min-height: 100vh;
+    min-height: calc(100vh - 10px);
+    padding: 16px 15px;
+}
+.btn-back {
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    left: 8px;
+    top: 12px;
+}
+.register-dry-cleaning h2 {
+    padding-top: 24px;
+    position: relative;
+}
+.register-dry-cleaning form.register-dry-cleaning-form {
+    background: #FCFCFC;
+    position: relative;
+}
+.register-dry-cleaning .chois-number {
+    color: #9B9B9B;
+}
+.register-dry-cleaning .label-sum {
+    color: #9B9B9B;
+    /*padding-top: 8px;*/
+    line-height: 32px;
+}
+.register-dry-cleaning .using .label-sum, .register-dry-cleaning .using .chois-number {
+    color:#313131;
+}
+.register-dry-cleaning .form-row {
+    padding: 6px 15px;
+    display: block;
+    box-sizing: border-box;
+}
+.register-dry-cleaning-form .form-row:first-child {
+    padding-top: 0px;
+}
+.register-dry-cleaning .form-row-name {
+    width: 45%;
+    /*padding-top: 8px;*/
+    text-align: left;
+    float: left;
+    font-size: 15px;
+    letter-spacing: -1px;
+    line-height: 32px;
+}
+.register-dry-cleaning .form-row-value {
+    width: 55%;
+    float: left;
+}
+
+.register-dry-cleaning .not-requered .form-row-name {
+    font-size: 12px;
+    color: #A0A0A0;
+}
+
+.register-dry-cleaning-form .form-row-name {
+    color: #313131;
+}
+
+.register-dry-cleaning-buttons {
+    width: 100%; 
+    /* padding: 10px 0;
+    border-bottom: 4px #0087E5 solid; */
+}
+.register-dry-cleaning .sum {
+    padding: 10px 0 15px 0;
+    color: #333333;
+    font-size: 14px;
+}
+.register-dry-cleaning .chois-number-input {
+    font-size: 15px;
+    /*padding-top: 4px;*/
+}
+.register-dry-cleaning .chois-number-title {
+    font-size: 13px;
+}
+.register-dry-cleaning .chois-number-input .chois-number-input-value {
+    color: #333333;
+    padding: 8px 1px 6px;
+    border: #ddd 1px solid;
+    border-radius: 4px;
+    width: 36px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.register-dry-cleaning .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.register-dry-cleaning .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.register-dry-cleaning .selected-items-body input {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.register-dry-cleaning .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.register-dry-cleaning .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.register-dry-cleaning .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+
+.register-dry-cleaning-form-second-step .selected-items {
+    padding: 0 15px;
+}
+
+.register-dry-cleaning-form-second-step .selected-items-body .selected-items-text {
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+.register-dry-cleaning-form-second-step .selected-items i {
+    display: none;
+}
+
+.register-dry-cleaning-form-second-step .selected-items-text {
+    background: url('../../img/textarea.png');
+    background-size: 100% 30px;
+    height: 30px;
+}
+
+.register-dry-cleaning .chois-number_left-side {
+    width: 30%;
+    min-width: 32px;
+    text-align: right;
+    float: left;
+}
+.register-dry-cleaning .chois-number_left-side div.minus {
+    margin-left: auto;
+    margin-right: 0;
+    line-height: 32px;
+    text-align: center;
+}
+.register-dry-cleaning .chois-number_right-side {
+    width: 30%;
+    min-width: 32px;
+    text-align: left;
+    float: left;
+}
+.register-dry-cleaning .chois-number_right-side div.plus {
+    margin-right: auto;
+    margin-left: 0;
+    line-height: 32px;
+    text-align: center;
+}
+.register-dry-cleaning .chois-number_left-side>div, .register-dry-cleaning .chois-number_right-side>div {
+    background: #eaf1ff;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    font-weight: bold;
+    padding: 0px;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.register-dry-cleaning .chois-number_center-side {
+    width: 40%;
+    /*margin-top: 3px; */
+    /* display: inline-block; */
+    float: left;
+    height: 32px;
+}
+/* .register-dry-cleaning .tips-row {
+    width: 60%;
+    margin: auto;
+}
+.register-dry-cleaning .tips-row .form-row-value {
+    width: auto;
+    margin: auto;
+} */
+
+.register-dry-cleaning .credit-info-row {
+    width: 100% !important;
+    margin-top: -10px !important;
+    padding-bottom: 10px !important;
+    color:#333333 !important;
+    font-size:20px !important;
+    text-align: center !important;
+}

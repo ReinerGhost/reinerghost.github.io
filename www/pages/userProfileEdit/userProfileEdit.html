@@ -1,0 +1,138 @@
+﻿
+<div class="user-profile-edit-bg">
+    <div class="user-profile-edit-sec-bg">
+        <a href="#/userProfile" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2>Edit Account</h2>
+        </div>
+        <div class="user-profile-edit">
+            <div class="error-log">
+            </div>
+            <form>
+                <label class="form-row not-requered">
+                    <div class="form-row-value">
+                        <input type="text" name="address" value="<% echo(UserData['address']['value']); %>" placeholder="Address" class="liox-input" />
+                    </div>
+                </label>
+                <div>
+                    <div class="col-6">
+                        <label class="form-row">
+                            <div class="form-row-value" style="padding-right: 8px;">
+                                <input type="text" name="apartment" value="<% echo(UserData['apartment']['value']); %>" placeholder="Apartment / Suite" class="liox-input" />
+                            </div>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-row">
+                            <div class="form-row-value" style="padding-left: 8px;">
+                                <input type="text" id="zipcode" name="zipcode" value="<% echo(UserData['zipcode']['value']); %>" placeholder="Zip Code" class="liox-input"  onblur="checkZipcode();" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <p id="service-area-error" style="color:red; font-weight:bold; display: none;">Unfortunately you are outside of our service area</p>
+                <!-- <label class="form-row not-requered">
+                    <div class="form-row-value">
+                        <select name="bankcard" class="liox-select" placeholder="Bank Card">
+                            <option value="Visa">Visa</option>
+                            <option value="MasterCard">MasterCard</option>
+                            <option value="Amex">American Express</option>
+                            <option value="Discover"></option>
+                        </select>
+                    </div>
+                </label> -->
+                <label class="form-row not-requered">
+                    <div class="form-row-value">
+                        <input type="text" id="cardnumber" name="cardnumber" placeholder="<% echo(UserData['cardnumber']['value']); %>" class="liox-input" value=""/>
+                    </div>
+                </label>
+                <label class="form-row not-requered">
+                    <div class="form-row-value">
+                        <input type="text" name="expiration" placeholder="<% echo(UserData['expiration']['value']); %>" class="liox-input" />
+                    </div>
+                </label>
+                <div>
+                    <div class="col-6">
+                        <label class="form-row">
+                            <div class="form-row-value" style="padding-right: 8px;">
+                                <input type="text" name="firstname" value="<% echo(UserData['firstname']['value']); %>" placeholder="First Name" class="liox-input" />
+                            </div>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-row">
+                            <div class="form-row-value" style="padding-left: 8px;">
+                                <input type="text" name="lastname" value="<% echo(UserData['lastname']['value']); %>" placeholder="Last Name" class="liox-input" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <label class="form-row not-requered">
+                    <div class="form-row-value">
+                        <input type="text" name="phone" value="<% echo(UserData['phone']['value']); %>" placeholder="Phone" class="liox-input" />
+                    </div>
+                </label>
+                <!-- <div>
+                    <label class="form-row col-6">
+                        <div class="form-row-value" style="padding-right: 8px;">
+                            <input type="password" name="password" value="" placeholder="Password" class="liox-input" />
+                        </div>
+                    </label>
+                    <label class="form-row col-6">
+                        <div class="form-row-value" style="padding-left: 8px;">
+                            <input type="password" name="password.confirm" value="" placeholder="Password Confirm" class="liox-input" />
+                        </div>
+                    </label>
+                </div> -->
+                <!-- <% for(var i in fields) { %>
+                <label class="form-row not-requered">
+                    <div class="form-row-name">
+                        <% echo(fields[i]['text']); %>
+                    </div>
+                    <div class="form-row-value instructions">
+                        <%
+                        if(typeof UserData[fields[i]['name']] != 'undefined'){
+                        if(typeof UserData[fields[i]['name']]['value'] != 'undefined') var value=UserData[fields[i]['name']]['value'];
+                        else var value=UserData[fields[i]['name']];
+                        } else if(typeof fields[i]['value'] != 'undefined') {
+                        var value=fields[i]['value'];
+                        } else var value="";
+                        %>
+                        <% if(typeof fields[i]['type'] == 'undefined') { %>
+                        <input type="text" name="<% echo(fields[i]['name']); %>" value="<% echo(value); %>" <% if(typeof fields[i]['placeholder'] == 'string') echo('placeholder="'+fields[i]['placeholder']+'"'); %> />
+                        <% } else if(fields[i]['type'] == 'number') { %>
+                        <input type="number" name="<% echo(fields[i]['name']); %>" value="<% echo(value); %>" <% if(typeof fields[i]['placeholder'] == 'string') echo('placeholder="'+fields[i]['placeholder']+'"'); %> />
+                        <% } else if(fields[i]['type'] == 'email') { %>
+                        <input type="email" name="<% echo(fields[i]['name']); %>" value="<% echo(value); %>">
+                        <% } else if(fields[i]['type'] == 'password') { %>
+                        <input type="password" name="<% echo(fields[i]['name']); %>" value="<% echo(value); %>">
+                        <% } else if(fields[i]['type'] == 'cartnumber') { %>
+                        <div class="cartnumber-body">
+                            <div class="cartnumber-text">
+                                <% echo(value); %>
+                            </div><i></i>
+                            <input type="text" name="<% echo(fields[i]['name']); %>" <% if(typeof fields[i]['placeholder'] == 'string') echo('placeholder="'+fields[i]['placeholder']+'"'); %> />
+                        </div>
+                        <% } else if(fields[i]['type'] == 'select') { %>
+                        <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text ">Studio</span><i></i>
+                            </div>
+                            <select name="<% echo(fields[i]['name']); %>">
+                                <% for(var z in fields[i]['data']) { %>
+                                <option value="<% echo(fields[i]['data'][z]['value']); %>" <% if(fields[i]['data'][z]['value']==UserData[fields[i]['name']]['value']) echo('selected');%>><% echo(fields[i]['data'][z]['text']); %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="clear"></div>
+                </label>
+                <% } %> -->
+            </form>
+        </div>
+        <div id="address-btn" class="user-profile-edit-bottom-buttons onFocusHide">
+            <button class="user-profile-edit-button btn-liox btn-fill">Save</button>
+        </div>
+    </div>
+</div>

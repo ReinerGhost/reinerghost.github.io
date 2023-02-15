@@ -1,0 +1,48 @@
+
+
+<div class="register-second-step-bg">
+    <div class="register-second-step">
+        <img src="img/logo.png" class="width25 logo" />
+        <div class="error-log"></div>
+        <form>
+            <% for(var i in fields) { %>
+            <label class="form-row not-requered">
+                <div class="form-row-name">
+                    <% echo(fields[i]['text']); %>
+                </div>
+                <div class="form-row-value instructions">
+                    <% if(typeof fields[i]['type'] == 'undefined') { %>
+                    <input type="text" name="<% echo(fields[i]['name']); %>" value="" <% if(typeof fields[i]['placeholder'] == 'string') echo('placeholder="'+fields[i]['placeholder']+'"'); %>>
+                    <% } else if(fields[i]['type'] == 'email') { %>
+                    <input type="email" name="<% echo(fields[i]['name']); %>" value="">
+                    <% } else if(fields[i]['type'] == 'password') { %>
+                    <input type="password" name="<% echo(fields[i]['name']); %>" value="">
+                    <% } else if(fields[i]['type'] == 'select') { %>
+                    <center>
+                        <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text ">Studio</span><i></i>
+                            </div>
+                            <select name="<% echo(fields[i]['name']); %>">
+                                <% for(var z in fields[i]['data']) { %>
+                                <option value="<% echo(fields[i]['data'][z]['value']); %>"><% echo(fields[i]['data'][z]['text']); %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </center>
+                    <% } %>
+                        <input type="hidden" name="store_credit" value="0">
+                    <div class="error" style="color:red; position:relative; top:5px; margin:auto;"></div>
+                </div>
+                <div class="clear"></div>
+            </label>
+            <% } %>
+        </form>
+        <div class="log" style="color:red">
+
+        </div>
+    </div>
+    <div class="register-second-step-bottom-buttons onFocusHide">
+        <img src="img/submit.png" class="width50 register-second-step-button" />
+    </div>
+</div>

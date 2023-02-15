@@ -1,0 +1,62 @@
+﻿
+.order-history-page-bg .logo {
+    margin: 15px 0 0 0;
+}
+.order-history-page h2 {
+    margin: 0;
+    margin-bottom: 38px;
+}
+.order-history-page {
+    /* background: url('../../img/background.jpg'); */
+    background-size: auto 100%;
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 10px);
+    padding: 0 17px;
+    padding-top: 15%;
+}
+.order-history-page .date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+.order-history-page .service-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+.order-history-page .status {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #979797;
+}
+.order-history-page table {
+    margin-bottom: 38px;
+}
+.order-history-page td {
+    padding-top: 15px;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 5px;
+}
+.order-history-page tr.not-canceled div.date,
+.order-history-page tr.not-canceled div.service-name
+{
+    color: #14374C !important;
+}
+.order-history-page tr.canceled div.date,
+.order-history-page tr.canceled div.service-name {
+    color: #A4A4A4 !important;
+}

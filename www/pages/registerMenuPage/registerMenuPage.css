@@ -1,0 +1,54 @@
+﻿
+.register-menu-page-bg .logo {
+    margin: 15px 0 0 0;
+}
+.register-menu-page h2 {
+    margin: 0;
+    padding: 10px;
+}
+.register-menu-page {
+    /* background: url('../../img/background.jpg'); */
+    background-size: auto 100%;
+    position: relative;
+    width: 100%;
+	min-height: 100%;
+	min-height: 100vh;
+    min-height: calc(100vh - 10px);
+    padding: 0 30px;
+    padding-top: 50%;
+}
+.register-menu-page .holiday_note {
+    text-align: center;
+    color: red;
+}
+.account-button {
+    width:100%;
+    display:block;
+    text-align:center;
+}
+.menu-text-link {
+    display:inline-block;
+}
+
+.register-menu-page-bottom-buttons {
+    width: 83%;
+    width:calc(100% - 60px);
+    padding: 10px 0;
+    /* border-bottom: 2px #0087E5 solid; */
+    position: absolute;
+    bottom: 10px;
+    box-sizing: border-box;
+}
+.btn-liox.btn-fill {
+    border: #3d77ea 1px solid;
+}
+.price-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #16374B;
+    margin-bottom: 6px;
+}

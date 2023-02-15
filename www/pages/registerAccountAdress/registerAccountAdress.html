@@ -1,0 +1,65 @@
+
+<div class="register-time-page-bg">
+    <div class="register-time-page">
+        <a href="#/<% echo(goBack); %>" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2>ACCOUNT ADDRESS</h2>
+
+        </div>
+        <!--Second form-->
+        <form class="register-account-page-form">
+            <div class="checkbox-list">
+                <div class="checkbox">
+                    <input class="custom-checkbox" type="radio" checked id="color-1" name="type" value="Doorman">
+                    <label for="color-1">Doorman</label>
+                </div>
+                <div class="checkbox">
+                    <input class="custom-checkbox" type="radio" id="color-2" name="type" value="Hotel">
+                    <label for="color-2">Hotel</label>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-label toggle" data-id="address">
+                    address
+                </div>
+                <div class="form-value">
+                    <input type="text" id="address" name="address" value="" placeholder="Address *" class="liox-input" onblur="if(document.getElementById('address').value.toLowerCase().includes('hotel')){HotelUser();}" onchange="storeLeadTimePage();" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-label toggle" data-id="apartment">apartment</div>
+                    <div class="form-value">
+                        <input type="text" id="apartment" name="apartment" value="" placeholder="Apt/Suite *" class="liox-input" onchange="storeLeadTimePage();" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label toggle" data-id="zipcode">zipcode</div>
+                    <div class="form-value">
+                        <input type="text" id="zipcode" name="zipcode" value="" placeholder="Zip Code *" class="liox-input" onblur="checkZipcode();" onchange="storeLeadTimePage();" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <p id="service-area-error" style="color:red;font-weight:bold;display: none;">Unfortunately you are outside of our service area</p>
+                <div class="form-label toggle"  data-id="instructions">
+                    instructions
+                </div>
+
+                <div class="form-value">
+                    <textarea class="liox-textarea" id="instructions" name="instructions" rows="5" placeholder="None"></textarea>
+                </div>
+
+            </div>
+
+
+
+        </form>
+        <div id="address-btn" class="register-time-page-buttons first-step">
+            <a onclick="toRegisterPage();" class="btn-liox btn-fill step-end">Next</a>
+        </div>
+    </div>
+</div>

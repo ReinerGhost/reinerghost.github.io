@@ -1,0 +1,154 @@
+﻿
+.register-profile-bg .logo {
+    margin: 15px 0;
+}
+.register-profile {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    /* padding: 0 30px; */
+    min-height: calc( 100vh - 200px );
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.register-profile-sec-bg {
+    /*background: url('../../img/background.jpg');*/
+    background-size: auto 110%;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.btn-back {
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    left: 8px;
+    top: 12px;
+}
+.register-profile-sec-bg h2 {
+    padding-top: 24px;
+    position: relative;
+    margin-top: 8px;
+}
+
+.openBankData {
+    text-align: left;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* 6 */
+
+    color: #AAAAAA;
+    cursor: pointer;
+}
+
+
+.register-profile-bottom-buttons {
+    width: 100%;
+    padding: 10px 0;
+    /* border-bottom: 2px #0087E5 solid; */
+}
+.register-profile .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.register-profile .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.register-profile .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.register-profile .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.register-profile .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.register-profile .cartnumber-body {
+    position: relative;
+    text-align: center;
+}
+.register-profile .cartnumber-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}
+.register-profile .cartnumber-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.register-profile .cartnumber-body input {
+    background: white;
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.register-profile input:focus {
+    opacity:1;
+}
+
+#show_password {
+    display: none;
+}
+.show-password-label {
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#show_password + .show-password-label:before {
+    content: '';
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #3d77ea;
+    display: inline-block;
+    width: 12px; height: 12px;
+    margin-right: 10px;
+    padding: 2px;
+    vertical-align: -4px;
+}
+#show_password:checked + .show-password-label:before {
+    background: #3d77ea;
+}
+.checkbox {
+    display: none;
+}
+#show_password:checked + .show-password-label:after {
+    content: "";
+    padding: 2px;
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    top: 2px;
+    left: 6px;
+}

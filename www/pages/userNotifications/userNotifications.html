@@ -1,0 +1,107 @@
+
+<div class="user-notifications-bg">
+    <div class="user-notifications-sec-bg">
+        <a href="#/userProfile" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left" style="padding-left:20px;">
+            <h2>Notifications</h2>
+        </div>
+        <div class="user-notifications">
+            <div class="main-column">
+                <div class="notifications__wrapper">
+                    <div class="notifications__items-block">
+                        <div class="notifications__items-block-title">Emails</div>
+
+                        <div class="notifications__item">
+                            <label>
+                                <span>Service Updates</span>
+                                <input type="checkbox" id="subscription_updates" name="service_updates"
+                                    <% if (notificationsData[notificationsSubscriptionFields[0]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint" style="">Emails with important service updates.</p>
+                        </div>
+                        <div class="notifications__item">
+                            <label>
+                                <span>Weekly Lemonade</span>
+                                <input type="checkbox" id="subscription_lemonade" name="weekly_lemonade"
+                                    <% if (notificationsData[notificationsSubscriptionFields[1]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint">Founder's newsletter that talks about company's exciting story, it's ups and downs.</p>
+                        </div>
+                        <div class="notifications__item">
+                            <label>
+                                <span>Promos and Discounts</span>
+                                <input type="checkbox" id="subscription_promos" name="promos"
+                                    <% if (notificationsData[notificationsSubscriptionFields[2]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint">Once in while we send discounts, birthday gifts and other promotional emails. Never a spam.</p>
+                        </div>
+                    </div>
+
+                    <div class="notifications__items-block notifications__hidden-block">
+                        <div class="notifications__items-block-title">Text</div>
+                        <div class="notifications__item">
+                            <label>
+                                <span>Delivery Notification*</span>
+                                <input type="checkbox" id="subscription_text_delivery" name="service_updates"
+                                    <% if (notificationsData[notificationsTextFields[0]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint" style=""><b>We recommend to keep this!</b><br />
+                                We will send you a text when we deliver your laundry.</p>
+                        </div>
+                        <div class="notifications__item">
+                            <label>
+                                <span>Pickup Notification</span>
+                                <input type="checkbox" id="subscription_text_pickup" name="weekly_lemonade"
+                                    <% if (notificationsData[notificationsTextFields[1]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint">We will send you a text notification when we have picked your laundry up.</p>
+                        </div>
+                        <div class="notifications__item">
+                            <label>
+                                <span>Estimate Driver Arrival</span>
+                                <input type="checkbox" id="subscription_text_driver_arrival" name="promos"
+                                    <% if (notificationsData[notificationsTextFields[2]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint">You will receive an estimate time of when driver will be arriving.</p>
+                        </div>
+                        <div class="notifications__item">
+                            <label>
+                                <span>Concierge is here*</span>
+                                <input type="checkbox" id="subscription_text_concierge" name="promos"
+                                    <% if (notificationsData[notificationsTextFields[3]]){
+                                        echo('checked');
+                                    }%>>
+                                <span></span>
+                            </label>
+                            <p class="hint"><b>We recommend to keep this!</b><br />
+                                You will receive a text when concierge is almost at your location, so you could prepare your laundry.</p>
+                        </div>
+                    </div>
+                    <div class="notifications__items-block notifications__hidden-block">
+                        <div class="notifications__item">
+                            <p class="hint">* We highly recommend to keep these notifications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

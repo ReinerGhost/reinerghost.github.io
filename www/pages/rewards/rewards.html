@@ -1,0 +1,60 @@
+﻿
+<div class="rewards-page-bg">
+    <div class="rewards-page steps-section">
+
+        <a href="#/login" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+
+        <div class="text-left">
+            <h2>Introducing <br>
+                Liox Elite Rewards</h2>
+        </div>
+
+        <div class="text-left">
+
+            <p>How to earn points?</p>
+
+            <p>Each order earns different amount of points, depending on the order’s total. Try ordering less frequent, but heavier bags/loads to collect more points from each order.
+                Every 6 months, your accumulated points will convert into earned Elite Status. If you haven’t earned enough, your level will downgrade to a lower level.</p>
+
+            <h3>Order Total:</h3>
+
+            <table width="100%">
+                <tr>
+                    <td>$0 - $60</td>
+                    <td>$61 - $99</td>
+                    <td>$100 +</td>
+                </tr>
+                <tr>
+                    <td>$1 = <% echo(Settings.rewards_silver_point_per_one) %> points</td>
+                    <td>$1 = <% echo(Settings.rewards_gold_point_per_one) %> points</td>
+                    <td>$1 = <% echo(Settings.rewards_platinum_point_per_one) %> points</td>
+                </tr>
+            </table>
+
+            <h3>Reward Levels:</h3>
+
+            <div><span class="list-points-big-text">Silver - <% echo(Settings.rewards_silver_discount_percent) %>% OFF</span> <span class="list-points-small-text">(<% echo(Settings.rewards_silver_points) %> points)</span></div>
+            <div><span class="list-points-big-text">Gold - <% echo(Settings.rewards_gold_discount_percent) %>% OFF</span> <span class="list-points-small-text">(<% echo(Settings.rewards_gold_points) %> points)</span></div>
+            <div><span class="list-points-big-text">Platinum - <% echo(Settings.rewards_platinum_discount_percent) %>% OFF</span> <span class="list-points-small-text">(<% echo(Settings.rewards_platinum_points) %> points)</span></div>
+
+            <div class="free-same-day">Free same day Delivery <br>
+                VIP Liox Laundry Bag</div>
+
+            <div class="current-level-text">current level</div>
+
+            <% if(typeof User.tier_current_id !='undefined' && User.tier_current_id > 1) { %>
+            <div class="current-level"><% echo(User.tier_current_name);%> (<% echo(User.tier_current_discount);%>% OFF)</div>
+            <% } else { %>
+            <div class="current-level">&minus;</div>
+            <% }  %>
+            <div style="width:100%;height:50px;border: solid 1px #5b5bff;background-color:#FFF;border-radius: 5px;max-width: 360px; margin: auto;">
+                <div style="min-width: 112px;border-radius: 3px 0px 0px 3px;background-color: #5b5bff;width: calc(<% echo(User.tier_current_points);%>*100% / <% echo(User.tier_next_points);%>);max-width: 100%;">
+                    <h5 style="line-height:50px; width:100%; color:#FFF; margin:0; text-align: center;"><% echo(User.tier_current_points);%> points</h5>
+                </div>
+            </div>
+
+            <div class="next-level">next level: <% echo(User.tier_next_name);%> (<% echo(User.tier_next_points);%> points)</div>
+
+        </div>
+    </div>
+</div>

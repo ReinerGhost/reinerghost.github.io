@@ -1,0 +1,37 @@
+﻿
+<div class="register-bg">
+    <div class="register-sec-bg">
+        <div class="register">
+            <img src="img/logo.png" class="width25 logo" />
+            <form>
+                <% for(var i in fields) { %>
+                <label class="form-row not-requered">
+                    <div class="form-row-name">
+                        <% echo(fields[i]['text']); %>
+                    </div>
+                    <div class="form-row-value instructions">
+                        <% if(typeof fields[i]['type'] == 'undefined') { %>
+                        <input type="text" name="<% echo(fields[i]['name']); %>" value="">
+                        <% } else if(fields[i]['type'] == 'select') { %>
+                        <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text ">Studio</span><i></i>
+                            </div>
+                            <select name="<% echo(fields[i]['name']); %>">
+                                <% for(var z in fields[i]['data']) { %>
+                                <option value="<% echo(fields[i]['data'][z]['value']); %>"><% echo(fields[i]['data'][z]['text']); %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="clear"></div>
+                </label>
+                <% } %>
+            </form>
+        </div>
+        <div class="register-bottom-buttons onFocusHide">
+            <img src="img/submit.png" class="width50 register-button" />
+        </div>
+    </div>
+</div>

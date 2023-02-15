@@ -1,0 +1,84 @@
+﻿
+<div class="register-profile-bg">
+    <div class="register-profile-sec-bg">
+        <a href="#/registerTimePage" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2>Sign Up</h2>
+        </div>
+        <div class="register-profile">
+            <div class="error-log">
+            </div>
+            <form style="padding-top: 10px">
+                <div class="form-row">
+                    <div class="form-label">
+                        email
+                    </div>
+                    <div class="form-value">
+                        <input type="email" id="email" name="email" value="" placeholder="Email *" class="liox-input" onchange="storeLeadRegisterProfile();" />
+                    </div>
+                </div>
+                <div class="checkbox-list" style="margin-bottom: 0">
+                    <div class="checkbox">
+                        <input class="custom-checkbox" type="checkbox" id="show_password">
+                        <label for="show_password">Show Password</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">
+                        password
+                    </div>
+                    <div class="form-value">
+                        <input type="password" id="password" name="password" value="" placeholder="Password *" class="liox-input" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="form-label">firstname</div>
+                        <div class="form-value">
+                            <input type="text" id="firstname" name="firstname" value="" placeholder="First Name *" class="liox-input" onchange="storeLeadRegisterProfile();" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-label">lastname</div>
+                        <div class="form-value">
+                            <input type="text" id="lastname" name="lastname" value="" placeholder="Last Name *" class="liox-input" onchange="storeLeadRegisterProfile();" />
+                        </div>
+                    </div>
+                </div>
+
+                <label class="form-row" >
+                    <span class="form-label">phone</span>
+                    <div class="form-value">
+                        <input type="text" id="phone" name="phone" value="" placeholder="Phone *" class="liox-input" onchange="storeLeadRegisterProfile();" />
+                    </div>
+                </label>
+
+                <input type="hidden" name="bankcard" id="cardtype" value="" />
+
+                <label class="form-row openBank" style="display: none">
+                    <span class="form-label">
+                        card number
+                    </span>
+                    <div class="form-value">
+                        <input type="text" id="cardnumber" name="cardnumber" value="" placeholder="Card Number *" class="liox-input" onblur="testCreditCard();" />
+                    </div>
+                </label>
+                <label class="form-row  openBank" style="display: none">
+                    <span class="form-label">expiration</span>
+                    <div class="form-value">
+                        <input type="text" id="expiration" name="expiration" value="" placeholder="Expiration Date (mm/yy) *" class="liox-input" />
+                    </div>
+                </label>
+                <label class="form-row">
+                    <div class="openBankData" onclick="toggleBack()">
+                        + Add Payment Info (optional)
+                    </div>
+                </label>
+            </form>
+
+        </div>
+        <div class="register-profile-bottom-buttons onFocusHide">
+            <button class="register-profile-button btn-liox btn-fill">Order Total</button>
+        </div>
+    </div>
+</div>

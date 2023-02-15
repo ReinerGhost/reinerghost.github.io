@@ -1,0 +1,230 @@
+
+<div class="time-page-bg">
+    <div class="time-page">
+        <a href="#/<% echo(goBack); %>" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <%
+                if(globalData['goBack'] == 'Maid') {echo('<h2>Time and Address</h2>');} else { echo('<h2>Pick Up & Drop Off</h2>'); }
+            %>
+        </div>
+        <!--Second form-->
+        <form class="time-page-form">
+            <% if(goBack != 'homeCleaning') {%>
+            <div class="form-row">
+                <div class="form-row-name">
+                    <%
+                        if(globalData['goBack'] == 'Maid') {echo('STARTING');} else { echo('PICK UP'); }
+                    %>
+                </div>
+                <div class="form-row-value">
+                    <div class="width50 float-left first-select">
+                        <!-- <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text day-start-text">MAY 1</span><i></i>
+                            </div>
+                            <select name="day-start">
+                                <%
+                                    for(var i in PickUp) echo('<option value="'+i+'">'+PickUp[i]["day_info"]["text"]+'</option>');
+                                %>
+                            </select>
+                        </div> -->
+                        <div class="form-row-value">
+                            <div class="my-custom-select">
+                                <div class="my-custom-select-sub">
+                            <%
+                                echo('<span class="selected-items-text day-start-text" style="display:none;">'+PickUp[0]["day_info"]["text"]+'</span>');
+                            %>
+                            <select name="day-start" class="liox-select liox-select-day-start">
+                                <%
+                                    for(var i in PickUp) echo('<option value="'+i+'">'+PickUp[i]["day_info"]["text"]+'</option>');
+                                %>
+                            </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="width50 float-left second-select">
+                        <!-- <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text time-start-text">6:00 - 8:00 AM</span><i></i>
+                            </div>
+                            <select name="time-start">
+                                <%
+                                for(var i in PickUp[0]["work_times"]) {
+                                echo('<option value="'+PickUp[0]["day_info"]["value"]+' '+PickUp[0]["work_times"][i]["value"]+'">'+PickUp[0]["work_times"][i]["text"]+'</option>');
+                                }
+                                %>
+                            </select>
+                        </div> -->
+                        <div class="form-row-value">
+                            <div class="my-custom-select">
+                                <div class="my-custom-select-sub">
+                            <%
+                                echo('<span class="selected-items-text time-start-text" style="display:none;">'+PickUp[0]["work_times"][0]["text"]+'</span>');
+                            %>
+                            <select name="time-start" class="liox-select liox-select-time-start">
+                                <%
+                                    for(var i in PickUp[0]["work_times"]) {
+                                    echo('<option value="'+PickUp[0]["day_info"]["value"]+' '+PickUp[0]["work_times"][i]["value"]+'">'+PickUp[0]["work_times"][i]["text"]+'</option>');
+                                    }
+                                %>
+                            </select>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="form-row <%
+                        if(globalData['goBack'] == 'Maid') {echo('hide');}
+                        %>">
+                <div class="form-row-name">
+                    DROP OFF
+                </div>
+                <div class="form-row-value">
+                    <div class="width50 float-left first-select">
+                        <!-- <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text day-end-text">MAY 2</span><i></i>
+                            </div>
+                            <select name="day-end">
+                                <%
+                                for(var i in DropOff) echo('<option value="'+i+'">'+DropOff[i]["day_info"]["text"]+'</option>');
+                                %>
+                            </select>
+                        </div> -->
+                        <div class="form-row-value">
+                            <%
+                                echo('<span class="selected-items-text day-end-text" style="display:none;">'+DropOff[0]["day_info"]["text"]+'</span>');
+                            %>
+                            <div class="my-custom-select">
+                                <div class="my-custom-select-sub">
+                                    <select name="day-end" class="liox-select liox-select-day-end">
+                                    <%
+                                    for(var i in DropOff) echo('<option value="'+i+'">'+DropOff[i]["day_info"]["text"]+'</option>');
+                                    %>
+                                    </select>
+                                    <span class="same-day-select-date">(+$8)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="width50 float-left second-select">
+                        <!-- <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text time-end-text">7:15 - 9:15 AM</span><i></i>
+                            </div>
+                            <select name="time-end">
+                                <%
+                                for(var i in DropOff[0]["work_times"]) {
+                                echo('<option value="'+DropOff[0]["day_info"]["value"]+' '+DropOff[0]["work_times"][i]["value"]+' ">'+DropOff[0]["work_times"][i]["text"]+'</option>');
+                                }
+                                %>
+                            </select>
+                        </div> -->
+                        <div class="form-row-value">
+                            <div class="my-custom-select">
+                                <div class="my-custom-select-sub">
+                            <%
+                                echo('<span class="selected-items-text time-end-text" style="display:none;">'+DropOff[0]["work_times"][0]["text"]+'</span>');
+                            %>
+                            <select name="time-end" class="liox-select liox-select-time-end">
+                                <%
+                                for(var i in DropOff[0]["work_times"]) {
+                                echo('<option value="'+DropOff[0]["day_info"]["value"]+' '+DropOff[0]["work_times"][i]["value"]+' ">'+DropOff[0]["work_times"][i]["text"]+'</option>');
+                                }
+                                %>
+                            </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <!--
+                <div class="<%
+                        if(globalData['goBack'] == 'Maid') {echo('hide');}
+                        %>" style="font-size:13px; color:#333; margin-top:24px; margin-bottom: 16px;">
+                    Turn around of 22 hours or less considered<br>rush/same day with $<% echo(Settings.rush_price) %> rush fee.
+                </div>
+                -->
+            </div>
+            <% } else { %>
+            <div class="form-row">
+                <div class="form-row-name">
+                    STARTING TIME
+                </div>
+                <div class="form-row-value">
+                    <div class="width50 float-left first-select">
+                        <!-- <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text day-start-text">MAY 1</span><i></i>
+                            </div>
+                            <select name="day-start">
+                                <%
+                                for(var i in PickUp) echo('<option value="'+i+'">'+PickUp[i]["day_info"]["text"]+'</option>');
+                                %>
+                            </select>
+                        </div> -->
+                        <div class="form-row-value">
+                            <div class="my-custom-select">
+                                <div class="my-custom-select-sub">
+                            <select name="day-start" class="liox-select day-start-text">
+                                <%
+                                for(var i in PickUp) echo('<option value="'+i+'">'+PickUp[i]["day_info"]["text"]+'</option>');
+                                %>
+                            </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="width50 float-left second-select">
+                        <!-- <div class="selected-items-body">
+                            <div class="selected-items">
+                                <span class="selected-items-text time-start-text">6:00 - 8:00 AM</span><i></i>
+                            </div>
+                            <select name="time-start">
+                                <%
+                                for(var i in PickUp[0]["work_times"]) {
+                                echo('<option value="'+PickUp[0]["day_info"]["value"]+' '+PickUp[0]["work_times"][i]["value"]+' ">'+PickUp[0]["work_times"][i]["text"]+'</option>');
+                                }
+                                %>
+                            </select>
+                        </div> -->
+                        <div class="form-row-value">
+                            <div class="my-custom-select">
+                                <div class="my-custom-select-sub">
+                            <select name="time-start" class="liox-select time-start-text">
+                                <%
+                                for(var i in PickUp[0]["work_times"]) {
+                                echo('<option value="'+PickUp[0]["day_info"]["value"]+' '+PickUp[0]["work_times"][i]["value"]+' ">'+PickUp[0]["work_times"][i]["text"]+'</option>');
+                                }
+                                %>
+                            </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <% } %>
+            <div class="form-row">
+                <div class="form-row-name">
+                    INSTRUCTIONS
+                </div>
+                <div class="form-row-value instructions">
+                    <textarea class="liox-textarea" name="instructions" rows="5" placeholder="None"></textarea>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </form>
+        <div class="time-page-buttons first-step">
+            <a href="#/totalPage" class="btn-liox btn-fill step-end">Order Total</a>
+        </div>
+    </div>
+</div>

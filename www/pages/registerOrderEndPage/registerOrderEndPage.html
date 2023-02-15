@@ -1,0 +1,33 @@
+﻿
+<div class="register-end-page-bg">
+    <div class="register-end-page">
+        <div class="register-end-page-info-body" <% if(service == 'dryCleaning' || service == 'washFold' || service == 'registerWashFold' || service == 'registerDryCleaning') { %>style="top: -155px" <% } %>>
+            <div class="register-end-page-info">
+                <% if(success === 'true') { %>
+                    <div class="text-center">
+                        <img src="./img/icn_contratulation.png" width="48">
+                    </div>
+                <% } %>
+                <% echo(text); %>
+            </div>
+            <% if(service == 'dryCleaning' || service == 'washFold' || service == 'registerWashFold' || service == 'registerDryCleaning') { %>
+            <div style="margin-top:45px;">
+                <img src="./img/order_success.png" style="width: 177px; height: 186px;"/>
+            </div>
+            <div style="margin-top:13px;">
+                Have you tried our cleaning service?
+            </div>
+            <% } %>
+        </div>
+        <div class="register-end-page-buttons">
+            <% if(service == 'dryCleaning' || service == 'washFold' || service == 'registerWashFold' || service == 'registerDryCleaning') { %>
+            <a href="#/Maid" class="btn-liox btn-fill" style="margin-bottom: 20px;">Booking a Cleaning</a>
+            <a href="#/menuPage" class="btn-liox btn-round">Done</a>
+            <% } %>
+            <% if(service != 'dryCleaning' && service != 'washFold' && service != 'registerWashFold' && service != 'registerDryCleaning') { %>
+            <a href="#/menuPage" class="btn-liox btn-fill">Done</a>
+            <% } %>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,199 @@
+
+<div class="pricing-modal" style="display:none;">
+
+    <div class="header">
+        Pricing
+        <div class="close" onclick="closeModalPrice()">
+            <img src="/images/new_images/modal-close-app.svg" alt="">
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title">Home
+            Cleaning</div>
+        <div class="group-price">
+            <div class="price-name">Studio <p>(Starting)</p>
+            </div>
+            <span>$<% echo(Settings.home_studio_starting_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            <div class="price-name"> 1 BR <p>(Starting)</p>
+            </div>
+            <span>$<% echo(Settings.home_1br_starting_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            Weekly Cleaning
+            <span>20% OFF</span>
+        </div>
+        <div class="group-price">
+            Every 2 Weeks
+            <span>$15% OFF</span>
+        </div>
+        <div class="group-price" style="margin-bottom:
+                                                            0px">
+            Every 4 Weeks
+            <span>10% OFF</span>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-price" style="margin-bottom:
+                                                            16px">
+            Additional
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Inside Fridge
+            </div>
+            <span>$<% echo(Settings.home_cleaning_fridge_price);%></span>
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Inside Oven
+            </div>
+            <span>$<% echo(Settings.home_cleaning_oven_price);%></span>
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Inside
+                Cabinets
+            </div>
+            <span>$<% echo(Settings.home_cleaning_cabinets_price);%></span>
+        </div>
+    </div>
+</div>
+
+<div class="register-maid-bg">
+    <div class="register-maid">
+        <a href="#/registerMenuPage" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2 style="margin-bottom: 0;">HOME CLEANING</h2>
+        </div>
+        <!--First form-->
+        <form class="register-maid-form-first-step">
+            <!--<img src="img/logo.png" class="logo" />-->
+            <div class="form-row">
+                <div class="form-label" data-id="bedrooms">
+                    bedrooms
+                </div>
+                <div class="form-value sub">
+                    <select name="bedrooms" id="bedrooms" class="liox-select">
+                        <option value="0">STUDIO</option>
+                        <option value="1">1 BEDROOM</option>
+                        <option value="2">2 BEDROOMS</option>
+                        <option value="3">3 BEDROOMS</option>
+                        <option value="4">4 BEDROOMS</option>
+                        <option value="5">5 BEDROOMS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label" data-id="bathrooms">
+                    bathrooms
+                </div>
+                <div class="form-value sub">
+                    <select name="bathrooms" id="bathrooms" class="liox-select">
+                        <option value="1">1 BATHROOM</option>
+                        <option value="2">2 BATHROOMS</option>
+                        <option value="3">3 BATHROOMS</option>
+                        <option value="4">4 BATHROOMS</option>
+                        <option value="5">5 BATHROOMS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-label" data-id="clean_type">
+                        cleaning type
+                    </div>
+                    <div class="form-value sub">
+                        <select name="clean_type" id="clean_type" class="liox-select">
+                            <option value="0">STANDARD</option>
+                            <option value="1">PREMIUM</option>
+                            <option value="2">DEEP CLEAN</option>
+                            <option value="3">MOVE IN/OUT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label" data-id="clean_type">
+                        subscription
+                    </div>
+                    <div class="form-value sub">
+                        <select name="frequency" id="frequency" class="liox-select">
+                            <option value="1">ONE TIME</option>
+                            <option value="2">EVERY 4 WEEKS</option>
+                            <option value="3" selected>EVERY 2 WEEKS</option>
+                            <option value="4">WEEKLY</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-label">
+                        tips
+                    </div>
+                    <div class="form-value sub">
+                        <% if(typeof Settings.home_cleaning_default_tips !='undefined' && Settings.home_cleaning_default_tips> 0) { %>
+                        <input type="hidden" name="tips" id="tips" value="<% echo(Settings.home_cleaning_default_tips);%>" class="chois-number-input-real-value" />
+                        <% } else { %>
+                        <input type="hidden" name="tips" id="tips" value="20" class="chois-number-input-real-value" />
+                        <% } %>
+                        <select name="tips_select" id="tips_select" class="liox-select tips_select">
+                            <% for($i=1; $i <=40; $i++) {%>
+                                <option value="<% echo($i) %>" <%if(Settings.home_cleaning_default_tips==$i) echo('selected') %>>$<% echo($i) %>
+                                </option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                <div class="price-block" onclick="openModalPrice()">
+                    Pricing
+                </div>
+            </div>
+            <div class="too-col-label" style="padding-top: 30px;">
+                <div class="form-label">
+                    Extras
+                </div>
+                <label class="form-row2 col-4" style="padding: 0 0
+                                                15px 0;">
+                    <span name="extras_1" id="extras_1" class="liox-radio extras-button" style="margin: 0
+                                                    10px 10px
+                                                    0;" data="1">INSIDE FRIDGE</span>
+                    <input type="hidden" name="extras_var_1" id="extras_var_1" value="0">
+                </label>
+                <label class="form-row2 col-4" style="padding: 0 0
+                                                15px 0;">
+                    <span name="extras_2" id="extras_2" class="liox-radio extras-button" style="width:
+                                                    calc(100% -
+                                                    20px); margin:
+                                                    0 10px 10px 10px;" data="2">INSIDE OVEN</span>
+                    <input type="hidden" name="extras_var_2" id="extras_var_2" value="0">
+                </label>
+                <label class="form-row2 col-4" style="padding: 0 0
+                                                15px 0;">
+                    <span name="extras_3" id="extras_3" class="liox-radio extras-button" style="margin:
+                                                    0px 0px 10px
+                                                    10px;" data="3">INSIDE CABINETS</span>
+                    <input type="hidden" name="extras_var_3" id="extras_var_3" value="0">
+                </label>
+                <div class="clear"></div>
+            </div>
+
+            <div class="sum">
+                <span class="sum-title">Estimated Total: $</span>
+                <span class="sum-body" id="sum-body">90</span>
+            </div>
+            <% if(typeof User.store_credit !='undefined' && User.store_credit> 0) { %>
+            <div class="col-12">
+                <div class="form-row-name credit-info-row">
+                    Credit: $<% echo(User.store_credit);%>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <% } %>
+        </form>
+        <div class="first-step">
+            <button class="btn-liox btn-fill second-step">Booking Time</button>
+        </div>
+    </div>
+</div>

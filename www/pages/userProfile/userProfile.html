@@ -1,0 +1,29 @@
+﻿
+<div class="user-profile-bg">
+    <div class="user-profile-sec-bg">
+        <a href="#/menuPage" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left" style="padding-left:20px;">
+            <h2>Account</h2>
+        </div>
+        <div class="user-profile">
+            <!-- <img src="img/logo.png" class="width25 logo" /> -->
+            <form>
+                <% for(var i in fields) { %>
+                <label class="form-row not-requered">
+                    <div class="form-row-name">
+                        <% echo(UserData[fields[i]]['text']); %>
+                    </div>
+                    <div class="form-row-value instructions">
+                        <% echo(UserData[fields[i]]['value']); %>
+                    </div>
+                    <div class="clear"></div>
+                </label>
+                <% } %>
+            </form>
+        </div>
+        <div class="user-profile-bottom-buttons onFocusHide">
+            <a href="#/userNotifications" class="btn-liox btn-clear btn-bordered">Notifications</a>
+            <a href="#/userProfileEdit" class="btn-liox btn-fill">Edit</a>
+        </div>
+    </div>
+</div>

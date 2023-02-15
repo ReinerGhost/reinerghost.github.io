@@ -1,0 +1,64 @@
+﻿
+<div class="menu-page-bg">
+    <div class="menu-page">
+        <!-- <img src="img/logo.png" class="width50 logo" /> -->
+        <h1>
+            Hello, <% echo(user.firstname); %>
+        </h1>
+        <% if(typeof user.holiday_note && user.holiday_note.length>0) { %>
+        <span class="holiday_note" style="margin-bottom: 10px; display: block;">
+            <% echo(user.holiday_note); %>
+        </span>
+        <% } %>
+        <a href="#/washFold" class="btn-liox btn-fill">
+            Wash & Fold
+        </a>
+        <br>
+        <a href="#/dryCleaning" class="btn-liox btn-fill" style=""> <!--CORONA  background: #CCC; border: #CCC 1px solid;-->
+            Dry Cleaning
+        </a>
+            <br>
+        <a href="#/Maid" class="btn-liox btn-fill" style=""> <!--CORONA  background: #CCC; border: #CCC 1px solid;-->
+            Home Cleaning
+        </a>
+        <br>
+        <a href="#/orderHistory" class="btn-liox btn-round">
+            Order History
+        </a>
+        <% if(Settings.features_rewards_program == 1) { %>
+        <br>
+        <a href="#/rewards" class="btn-liox">
+            <div style="color: #3d77ea;">Rewards</div>
+            <div>
+                <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="30" height="28" fill="url(#pattern0)"/>
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_2224_399" transform="translate(-0.00149254) scale(0.0139303 0.0149254)"/>
+                        </pattern>
+                        <image id="image0_2224_399" width="72" height="67" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+            </div>
+        </a>
+        <br>
+        <% } %>
+        <!--
+        <a href="#/homeCleaning" class="home-cleaning-button">
+            <img src="img/homeCleaning.png" class="width70" />
+        </a>
+        <a href="#/lastOrder" class="last-order-button">
+            <img src="img/lastOrder.png" class="width70" />
+        </a>
+
+        <a href="#/rating" class="account-button">
+            <p>
+                <div class="menu-text-link width70">RATING</div>
+            </p>
+        </a> -->
+        <div class="menu-page-bottom-buttons">
+            <a href="#/userProfile" class="btn-liox btn-clear">Account</a>
+            <button class="btn-liox btn-clear logout">Logout</button>
+        </div>
+    </div>
+</div>

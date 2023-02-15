@@ -1,0 +1,74 @@
+﻿
+.register-bg .logo {
+    margin: 15px 0;
+}
+.register {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+    min-height: 500px;
+    min-height: calc(100vh - 30px);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.register-sec-bg {
+    background: url('../../img/background.jpg');
+    background-size: auto 110%;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 30px);
+    padding: 15px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.register-button {
+    margin: 15px 0;
+}
+.register .form-row {
+    padding: 15px 0;
+    display: block;
+    box-sizing: border-box;
+}
+.register .from-row-name {
+    padding: 5px 0;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.register .from-row-value {
+
+}
+.register-bottom-buttons {
+    width: 100%; 
+    padding: 10px 0;
+    border-bottom: 2px #0087E5 solid;
+}
+.register .selected-items-body {
+    position: relative;
+    text-align: center;
+}
+.register .selected-items-body select {
+    width: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    opacity:0;
+}
+.register .selected-items-body .selected-items-text {
+    width: 100%;
+    padding: 3px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+.register .selected-items-body .selected-items-text.selected {
+    color: #333333;
+}
+.register .selected-items-body i {
+    background: #333333;
+    width: 30%;
+    min-width: 97px;
+    height: 1px;
+    margin: auto;
+    display: block;
+}

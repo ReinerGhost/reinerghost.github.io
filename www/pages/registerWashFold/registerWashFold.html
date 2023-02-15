@@ -1,0 +1,236 @@
+
+<div class="register-wash-fold-bg">
+    <div class="register-wash-fold">
+        <a href="#/registerMenuPage" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2>WASH &amp; FOLD</h2>
+        </div>
+        <!--First form-->
+        <form class="register-wash-fold-form-first-step">
+            <!--<img src="img/logo.png" class="logo" />-->
+            <div class="form-row">
+                <div class="form-label">
+                    detergent
+                </div>
+                <div class="form-value sub">
+                    <select name="detergent" class="liox-select">
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_1_active !='undefined' && Settings.wash_and_fold_supplies_detergent_1_active == 0) { %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_detergent_1);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_1);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_1_active !='undefined' && Settings.wash_and_fold_supplies_detergent_1_active == 2) { %>
+                        <option disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_1);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_1);%>
+                        </option>
+                        <% } %>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_2_active !='undefined' && Settings.wash_and_fold_supplies_detergent_2_active == 0) { %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_detergent_2);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_2);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_2_active !='undefined' && Settings.wash_and_fold_supplies_detergent_2_active == 2) { %>
+                        <option disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_2);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_2);%>
+                        </option>
+                        <% } %>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_3_active !='undefined' && Settings.wash_and_fold_supplies_detergent_3_active == 0) { %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_detergent_3);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_3);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_3_active !='undefined' && Settings.wash_and_fold_supplies_detergent_3_active == 2) { %>
+                        <option disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_3);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_3);%>
+                        </option>
+                        <% } %>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_4_active !='undefined' && Settings.wash_and_fold_supplies_detergent_4_active == 0) { %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_detergent_4);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_4);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_4_active !='undefined' && Settings.wash_and_fold_supplies_detergent_4_active == 2) { %>
+                        <option disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_4);%>">
+                            <% echo(Settings.wash_and_fold_supplies_detergent_4);%>
+                        </option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">
+                    softener
+                </div>
+                <div class="form-value sub">
+                    <select name="softener" class="liox-select">
+                        <option value="NONE">None </option>
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_1_active !='undefined' && Settings.wash_and_fold_supplies_softener_1_active == 0) {  %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_softener_1);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_1);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_1_active !='undefined' && Settings.wash_and_fold_supplies_softener_1_active  == 2) { %>
+                        <option disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_1);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_1);%>
+                        </option>
+                        <% } %>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_2_active !='undefined' && Settings.wash_and_fold_supplies_softener_2_active == 0) {  %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_softener_2);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_2);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_2_active !='undefined' && Settings.wash_and_fold_supplies_softener_2_active  == 2) { %>
+                        <option disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_2);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_2);%>
+                        </option>
+                        <% } %>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_3_active !='undefined' && Settings.wash_and_fold_supplies_softener_3_active == 0) {  %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_softener_3);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_3);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_3_active !='undefined' && Settings.wash_and_fold_supplies_softener_3_active  == 2) { %>
+                        <option disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_3);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_3);%>
+                        </option>
+                        <% } %>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_4_active !='undefined' && Settings.wash_and_fold_supplies_softener_4_active == 0) {  %>
+                        <option value="<% echo(Settings.wash_and_fold_supplies_softener_4);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_4);%>
+                        </option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_4_active !='undefined' && Settings.wash_and_fold_supplies_softener_4_active  == 2) { %>
+                        <option disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_4);%>">
+                            <% echo(Settings.wash_and_fold_supplies_softener_4);%>
+                        </option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-label">
+                        bleach
+                    </div>
+                    <div class="form-value sub">
+                        <select name="bleach" class="liox-select">
+                            <option value="NONE">None </option>
+                            <option value="$<% echo(Settings.wash_bleach_whites_price);%>"> YES </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-label">
+                        laundry bag
+                    </div>
+                    <div class="form-value sub">
+                        <select name="extra_bag" class="liox-select">
+                            <option value="None">None </option>
+                            <option value="$<% echo(Settings.wash_laundry_bag_price);%>"> YES </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-label">
+                        tips
+                    </div>
+                    <div class="form-value sub">
+                        <select name="tips_select" id="tips_select" class="liox-select tips_select">
+                            <% for($i=1; $i <=40; $i++) {%>
+                            <option value="<% echo($i) %>" <%if($i==9)
+                            echo('selected') %>>$<% echo($i) %>
+                            </option>
+                            <% } %>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="price-block" onclick="openModalPrice()">Pricing</div>
+            </div>
+
+            <% if(typeof User.store_credit !='undefined' && User.store_credit> 0) {  %>
+            <div class="col-12">
+                <div class="form-row-name credit-info-row">
+                    Credit: $<% echo(User.store_credit);%>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <%  } %>
+        </form>
+        <div class="first-step">
+            <button  class="btn-liox btn-fill second-step">
+                Pickup Time
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="pricing-modal" style="display:none;">
+
+    <div class="header">
+        Pricing
+        <div class="close" onclick="closeModalPrice()">
+            <img src="/images/new_images/modal-close-app.svg" alt="">
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title">Wash & Fold</div>
+        <div class="group-price">
+            Regular Laundry
+            <span>$<% echo(Settings.wash_lbs_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            Minimum Order
+            <span>$<% echo(Settings.minimum_order_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            Bleach
+            <span>$<% echo(Settings.wash_bleach_whites_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            Laundry Bag
+            <span>$<% echo(Settings.wash_laundry_bag_price);%>/lb</span>
+        </div>
+        <div class="group-price" style="margin-bottom: 0px">
+            Hang Dry Per Item
+            <span>$<% echo(Settings.wash_hang_dry_price);%>/lb</span>
+        </div>
+
+    </div>
+    <div class="group">
+        <div class="group-price" style="margin-bottom:
+                                16px">
+            Bedding charge additional to weight
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Bedding <p>(Mattress/Duvet Cover)</p>
+            </div>
+            <span>$<% echo(Settings.wash_mattress_duvet_cover_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Bedding <p>(Comforter)</p>
+            </div>
+            <span>$<% echo(Settings.wash_comforter_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Bedding <p>(Blanket/Throw)</p>
+            </div>
+            <span>$<% echo(Settings.wash_blanket_throw_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Bedding <p>(Pillow)</p>
+            </div>
+            <span>$<% echo(Settings.wash_pillow_price);%>/lb</span>
+        </div>
+        <div class="group-price">
+            <div class="price-name">
+                Bedding <p>(Rug)</p>
+            </div>
+            <span>$<% echo(Settings.wash_rug_price);%>/lb</span>
+        </div>
+    </div>
+</div>

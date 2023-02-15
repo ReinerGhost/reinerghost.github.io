@@ -1,0 +1,172 @@
+
+<div class="wash-fold-bg">
+    <div class="wash-fold">
+        <a href="#/menuPage" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+        <div class="text-left">
+            <h2>WASH &amp; FOLD</h2>
+        </div>
+        <!--First form-->
+        <form class="wash-fold-form-first-step">
+            <!--<img src="img/logo.png" class="logo" />-->
+            <label class="form-row">
+                <div class="form-row-name">
+                    Detergent
+                </div>
+                <div class="form-row-value">
+                    <div class="my-custom-select">
+                        <div class="my-custom-select-sub">
+                    <select name="detergent" class="liox-select">
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_1_active !='undefined' && Settings.wash_and_fold_supplies_detergent_1_active == 0) { %>
+                        <option data-supplyname="tide" value="<% echo(Settings.wash_and_fold_supplies_detergent_1);%>"><% echo(Settings.wash_and_fold_supplies_detergent_1);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_1_active !='undefined' && Settings.wash_and_fold_supplies_detergent_1_active == 2) { %>
+                        <option data-supplyname="tide" disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_1);%>"><% echo(Settings.wash_and_fold_supplies_detergent_1);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="tide" value="TIDE">TIDE</option>-->
+
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_2_active !='undefined' && Settings.wash_and_fold_supplies_detergent_2_active == 0) { %>
+                        <option data-supplyname="arm_hammer" value="<% echo(Settings.wash_and_fold_supplies_detergent_2);%>"><% echo(Settings.wash_and_fold_supplies_detergent_2);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_2_active !='undefined' && Settings.wash_and_fold_supplies_detergent_2_active == 2) { %>
+                        <option data-supplyname="arm_hammer" disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_2);%>"><% echo(Settings.wash_and_fold_supplies_detergent_2);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="arm_hammer" value="ARM & HAMMER">ARM &amp; HAMMER</option>-->
+
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_3_active !='undefined' && Settings.wash_and_fold_supplies_detergent_3_active == 0) { %>
+                        <option data-supplyname="seventh_generation" value="<% echo(Settings.wash_and_fold_supplies_detergent_3);%>"><% echo(Settings.wash_and_fold_supplies_detergent_3);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_3_active !='undefined' && Settings.wash_and_fold_supplies_detergent_3_active == 2) { %>
+                        <option data-supplyname="seventh_generation" disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_3);%>"><% echo(Settings.wash_and_fold_supplies_detergent_3);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="seventh_generation" value="SEVENTH GENERATION">SEVENTH GENERATION</option>-->
+
+                        <% if (typeof Settings.wash_and_fold_supplies_detergent_4_active !='undefined' && Settings.wash_and_fold_supplies_detergent_4_active == 0) { %>
+                        <option data-supplyname="liox_organic" value="<% echo(Settings.wash_and_fold_supplies_detergent_4);%>"><% echo(Settings.wash_and_fold_supplies_detergent_4);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_detergent_4_active !='undefined' && Settings.wash_and_fold_supplies_detergent_4_active == 2) { %>
+                        <option data-supplyname="liox_organic" disabled value="<% echo(Settings.wash_and_fold_supplies_detergent_4);%>"><% echo(Settings.wash_and_fold_supplies_detergent_4);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="liox_organic" value="LIOX ORGANIC">LIOX ORGANIC™</option>-->
+                    </select>
+                        </div>
+                    </div>
+                </div>
+            </label>
+            <label class="form-row">
+                <div class="form-row-name">
+                    Softener
+                </div>
+                <div class="form-row-value">
+                    <div class="my-custom-select">
+                        <div class="my-custom-select-sub">
+                    <select name="softener" class="liox-select">
+
+                        <option value="NONE">NONE</option>
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_1_active !='undefined' && Settings.wash_and_fold_supplies_softener_1_active == 0) { %>
+                        <option data-supplyname="downy" value="<% echo(Settings.wash_and_fold_supplies_softener_1);%>"><% echo(Settings.wash_and_fold_supplies_softener_1);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_1_active !='undefined' && Settings.wash_and_fold_supplies_softener_1_active == 2) { %>
+                        <option data-supplyname="downy" disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_1);%>"><% echo(Settings.wash_and_fold_supplies_softener_1);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="downy" value="DOWNY">DOWNY</option>-->
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_2_active !='undefined' && Settings.wash_and_fold_supplies_softener_2_active == 0) { %>
+                        <option data-supplyname="bounce_sheets" value="<% echo(Settings.wash_and_fold_supplies_softener_2);%>"><% echo(Settings.wash_and_fold_supplies_softener_2);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_2_active !='undefined' && Settings.wash_and_fold_supplies_softener_2_active == 2) { %>
+                        <option data-supplyname="bounce_sheets" disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_2);%>"><% echo(Settings.wash_and_fold_supplies_softener_2);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="bounce_sheets" value="BOUNCE">BOUNCE</option>-->
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_3_active !='undefined' && Settings.wash_and_fold_supplies_softener_3_active == 0) { %>
+                        <option data-supplyname="downy_free_sens" value="<% echo(Settings.wash_and_fold_supplies_softener_3);%>"><% echo(Settings.wash_and_fold_supplies_softener_3);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_3_active !='undefined' && Settings.wash_and_fold_supplies_softener_3_active == 2) { %>
+                        <option data-supplyname="downy_free_sens" disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_3);%>"><% echo(Settings.wash_and_fold_supplies_softener_3);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="downy_free_sens" value="DOWNY FREE SENSITIVE">DOWNY FREE SENSITIVE</option>-->
+
+                        <% if (typeof Settings.wash_and_fold_supplies_softener_4_active !='undefined' && Settings.wash_and_fold_supplies_softener_4_active == 0) { %>
+                        <option data-supplyname="liox_free_organic" value="<% echo(Settings.wash_and_fold_supplies_softener_4);%>"><% echo(Settings.wash_and_fold_supplies_softener_4);%></option>
+                        <% } else if (typeof Settings.wash_and_fold_supplies_softener_4_active !='undefined' && Settings.wash_and_fold_supplies_softener_4_active == 2) { %>
+                        <option data-supplyname="liox_free_organic" disabled="" value="<% echo(Settings.wash_and_fold_supplies_softener_4);%>"><% echo(Settings.wash_and_fold_supplies_softener_4);%></option>
+                        <% } %>
+<!--                        <option data-supplyname="liox_free_organic" disabled value="LIOX FREE ORGANIC">LIOX FREE ORGANIC™</option>-->
+                    </select>
+                        </div>
+                    </div>
+                </div>
+            </label>
+            <div class="too-col-label">
+                <label class="form-row col-6 label-bleach">
+                    <div class="form-row-name">
+                        BLEACH
+                    </div>
+                    <div class="my-custom-select">
+                        <div class="my-custom-select-sub">
+                    <select name="bleach" class="liox-select">
+                        <option value="NONE">NONE</option>
+                        <option value="$<% echo(Settings.wash_bleach_whites_price);%>">YES</option>
+                    </select>
+                        </div>
+                    </div>
+                </label>
+                <label class="form-row col-6 label-extra-bag">
+                    <div class="form-row-name">
+                        EXTRA BAG
+                    </div>
+                    <div class="my-custom-select">
+                        <div class="my-custom-select-sub">
+                    <select name="extra_bag" class="liox-select">
+                        <option value="NONE">NONE</option>
+                        <option value="$<% echo(Settings.wash_laundry_bag_price);%>">YES</option>
+                    </select>
+                        </div>
+                    </div>
+                </label>
+                <div class="clear"></div>
+            </div>
+            <label class="form-row" style="padding-top: 4px;">
+                <div class="form-row-name text-center" style="padding-bottom: 12px;">
+                    Tips
+                </div>
+                <div class="form-row-value">
+                    <div class="chois-number">
+                        <div class="chois-number_left-side">
+                            <div class="minus">&#45;</div>
+                            <!-- <img src="img/minus.png" class="width50 minus" /> -->
+                        </div>
+                        <div class="chois-number_center-side">
+                            <div class="chois-number-input">
+                                <% if(typeof Settings.wash_default_tips !='undefined' && Settings.wash_default_tips > 0) { %>
+                                <input type="hidden" name="tips" value="<% echo(Settings.wash_default_tips);%>" class="chois-number-input-real-value" />
+                                $ <span class="chois-number-input-value"><% echo(Settings.wash_default_tips);%></span>
+                                <% } else { %>
+                                <input type="hidden" name="tips" value="9" class="chois-number-input-real-value" />
+                                $ <span class="chois-number-input-value">9</span>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="chois-number_right-side">
+                            <div class="plus">&#43;</div>
+                            <!-- <img src="img/plus.png" class="width50 plus" /> -->
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </label>
+            <div class="sum">
+                <% if(typeof Settings.minimum_order_price !='undefined' && Settings.minimum_order_price > 0) { %>
+                <span class="sum-title">Minimum total: $</span><span class="sub-body"><% echo(Settings.minimum_order_price);%></span>
+                <% } else { %>
+                <span class="sum-title">Minimum total: $</span><span class="sub-body">35</span>
+                <% } %>
+            </div>
+            <% if(typeof User.store_credit !='undefined' && User.store_credit > 0) { %>
+            <div class="col-12">
+                <div class="form-row-name credit-info-row">
+                    Credit: $<% echo(User.store_credit);%>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <% } %>
+        </form>
+        <div class="first-step">
+            <button class="btn-liox btn-fill second-step">Pickup Time</button>
+        </div>
+    </div>
+</div>

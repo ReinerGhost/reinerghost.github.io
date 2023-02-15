@@ -1,0 +1,229 @@
+﻿
+<div class="order-details-page-bg">
+    <div class="order-details-page steps-section">
+
+        <a href="#/orderHistory" class="btn-back"><img src="./img/icn_back.png" width="24"></a>
+
+        <div class="text-left">
+            <h2>
+                Order Receipt
+                <!-- span class="order-id">(ID:<% echo(orderDetailsId) %>)</span -->
+            </h2>
+            <% if(typeof OrderHistory != 'undefined') { %>
+                <% for(var i in OrderHistory) { %>
+                    <% if( OrderHistory[i]['id'] == orderDetailsId) { %>
+                        <div class="order-date-info"><% echo(OrderHistory[i]['date']) %> - <% echo(OrderHistory[i]['service_name']) %></div>
+                    <% } %>
+                <% } %>
+            <% } %>
+        </div>
+
+<!--        <div>-->
+<!--            <select class="liox-select" style="background: white;" onchange="clickOnOrderDetailsSelect(this.value)">-->
+<!--                <% if(typeof OrderHistory != 'undefined') { %>-->
+<!--                    <% for(var i in OrderHistory) { %>-->
+<!--                    <option value="<% echo(OrderHistory[i]['id']) %>"<% if( OrderHistory[i]['id'] == orderDetailsId) { %> selected <% } %>-->
+<!--                    ><% echo(OrderHistory[i]['date']) %> - <% echo(OrderHistory[i]['service_name']) %></option>-->
+<!--                    <% } %>-->
+<!--                <% } %>-->
+<!--            </select>-->
+<!--        </div>-->
+
+        <% if(typeof orderDetailsInfo != 'undefined') { %>
+        <div>
+            <ul>
+                <% if(orderDetailsInfo['homeCleanDetails'] != false) { %>
+
+                    <li class="title">Home Details</li>
+                    <li class="details">
+                        <% echo(orderDetailsInfo['homeCleanDetails']['bedrooms']) %>, <% echo(orderDetailsInfo['homeCleanDetails']['bathrooms']) %>
+                    </li>
+                    <li class="title">Cleaning Type</li>
+                    <li class="details">
+                        <% echo(orderDetailsInfo['homeCleanDetails']['cleanType']) %> (<% echo(orderDetailsInfo['homeCleanDetails']['cleanTime']) %>)
+                    </li>
+                    <li class="title">Appointment</li>
+                    <li class="details">
+                        <% echo(orderDetailsInfo['homeCleanDetails']['frequency']) %><br>
+                        <% echo(orderDetailsInfo['homeCleanDetails']['startingDate']) %>
+                    </li>
+
+                    <% if (orderDetailsInfo['homeCleanDetails']['extras'].length > 0) { %>
+                    <li class="title">Additional</li>
+                    <li class="details">Add-Ons:&nbsp;
+                        <% for(var i in orderDetailsInfo['homeCleanDetails']['extras']) { %>
+                            <% echo(orderDetailsInfo['homeCleanDetails']['extras'][i]) %>,
+                        <% } %>
+                    </li>
+                    <% } %>
+
+                <% } else if (orderDetailsInfo['wash_attributes'] != false) { %>
+
+                    <% if (orderDetailsInfo['wash_attributes']['detergent'].length > 0) { %>
+                    <li class="title">Detergent</li>
+                    <li class="details">
+                        <% for( var i in orderDetailsInfo['wash_attributes']['detergent']) { %>
+                        <% echo (orderDetailsInfo['wash_attributes']['detergent'][i]) %>,
+                        <% } %>
+                    </li>
+                    <% } %>
+
+                    <li class="title">Details</li>
+                    <li class="details">
+                        <% if (orderDetailsInfo['wash_attributes']['details'].length == 0) { %>
+
+                            Laundry be measured and itemized on arrival
+
+                        <% } else {  %>
+
+                            <% for(var i in orderDetailsInfo['wash_attributes']['details']) { %>
+                                <% echo (orderDetailsInfo['wash_attributes']['details'][i]) %><br>
+                            <% } %>
+
+                            <% if (orderDetailsInfo['wash_total'] > 0) { %>
+                            <b>Wash Total: $<% echo(orderDetailsInfo['wash_total']) %></b>
+                            <% } %>
+
+                        <% } %>
+                    </li>
+
+                <% } else if (orderDetailsInfo['dryclean_attributes'] != false) { %>
+
+                    <li class="title">Items</li>
+                    <li class="details">
+                        <% for(var i in orderDetailsInfo['dryclean_attributes']) { %>
+                        <% echo(orderDetailsInfo['dryclean_attributes'][i]) %><br>
+                        <% } %>
+
+                        <% if (orderDetailsInfo['dryclean_total'] > 0) { %>
+                        <br><b>Dryclean Total: $<% echo(orderDetailsInfo['dryclean_total']) %></b>
+                        <% } %>
+                    </li>
+
+                <% } %>
+
+                <% if(orderDetailsInfo['homeCleanDetails'] == false) { %>
+
+                <% if(orderDetailsInfo['loyal_discount'] > 0) { %>
+                <li class="title">Rewards Discount</li>
+                <li class="details">$<% echo(orderDetailsInfo['loyal_discount']) %> off</li>
+                <% } %>
+
+                <% if(orderDetailsInfo['show_minimal_title'] == true) { %>
+                <li class="title">Minimum Order</li>
+                <li class="details"><b>$<% echo(orderDetailsInfo['minimum_formated']) %></b></li>
+                <% } %>
+
+                <li class="title">Delivery</li>
+                <li class="details">
+                    Pick Up - <% echo(orderDetailsInfo['pickup_start']) %> - <% echo(orderDetailsInfo['pickup_end']) %>
+                    <br>
+                    Drop Off - <% echo(orderDetailsInfo['dropoff_start']) %> - <% echo(orderDetailsInfo['dropoff_end']) %>
+                    <% if(orderDetailsInfo['samedayRush'] > 0) { %>
+                    <div>Same day / Rush +$<% echo(orderDetailsInfo['rush']) %></div>
+                    <% } %>
+                </li>
+
+                <% } %>
+
+                <% if(orderDetailsInfo['discount_type'] == 1 && orderDetailsInfo['discount_amount'] > 0) { %>
+                <li class="title">Discount</li>
+                <li class="details"><% echo(orderDetailsInfo['discount_comment']) %> $<% echo(orderDetailsInfo['discount_amount']) %> off</li>
+                <% } %>
+
+                <li class="title">Tips</li>
+                <li class="details">$<% echo(orderDetailsInfo['tips']) %></li>
+
+                <li class="title">Living Wage Fee</li>
+                <li class="details">$<% echo(orderDetailsInfo['living_wage_fee']) %></li>
+
+                <% if ( orderDetailsInfo['total_formated'] != '' ) { %>
+                <li class="title">Total</li>
+                <li class="details">
+                    <b> $<% echo(orderDetailsInfo['total_formated']) %></b>
+                </li>
+                <% } %>
+
+                <% if(orderDetailsInfo['points'] > 0) { %>
+                <li class="title">Earned Points</li>
+                <li class="details">
+                    <span style="font-size:18px; font-weight:bold;"><% echo(orderDetailsInfo['points']) %></span>
+                </li>
+                <% } %>
+
+                <li class="title">Order Status</li>
+                <li class="details"><% echo(orderDetailsInfo['status']) %></li>
+
+                <li class="title">Important</li>
+                <% if(orderDetailsInfo['homeCleanDetails'].length > 0) { %>
+                <li class="details">If you are unable to keep appointment, please always let us know by 12 pm the day before to avoid cancellation fee.</li>
+                <% } else { %>
+                <li class="details">If you live in walk-up building, make sure you are home during pick up and drop off "windows".
+                    If you live in doorman building, just leave your laundry bags at the doorman before pickup time, we will do the rest.</li>
+                <% } %>
+
+                <% if(dataProof.signature != null) { %>
+                <li class="title">Signature Proof</li>
+                <li class="details">
+                    <a href="javascript:void(0)" onclick="displaySignature();">View</a>
+                </li>
+                <% } %>
+
+                <% if(dataProof.picture_proofs != null) { %>
+                <li class="title">Picture Proof</li>
+                <li class="details">
+                    <% for(var i = 0; i < dataProof.picture_proofs.length; i++) { %>
+                        <div><a href="javascript:void(0)" onclick="displayProof(<% echo(dataProof.picture_proofs[i].id); %>)">View</a></div>
+                    <% } %>
+                </li>
+                <% } %>
+
+            </ul>
+        </div>
+        <% } %>
+
+    </div>
+</div>
+
+<div id="signature-modal" class="modal-bk" data-modal="signature-modal">
+<!--    <div class="modal-close js-close-modal hide-on-phone"-->
+<!--         onclick="document.getElementById('signature-modal').setAttribute('data-modal-state', 'closed');">-->
+<!--        <img class="svg" src="/images/new_images/modal-close.svg" loading="lazy" alt="order laundry window">-->
+<!--    </div>-->
+    <div class="modal">
+        <div class="modal-close js-close-modal only-on-phone"
+             onclick="document.getElementById('signature-modal').setAttribute('data-modal-state', 'closed');">
+            <img class="svg" src="/images/new_images/modal-close.svg" alt="order laundry window" loading="lazy"
+                 style="filter: invert(.5);width: 30px;padding: 0 5px 0 5px;position: relative;top: -10px;left: 10px;">
+        </div>
+        <div class="modal-header">
+            <h3 id="success_message">Signature preview</h3>
+        </div>
+        <div class="modal-body" style="padding: 5px; text-align: left;">
+            <div><strong>Signed by: </strong><span id="signature_signed_by">zzz</span></div>
+            <div><strong>Date/Time: </strong><span id="signature_created_at">zzz</span></div>
+            <div id="signature_image"></div>
+        </div> <!-- End of Modal-body -->
+    </div>
+</div>
+
+<div id="picture-proof-modal" class="modal-bk" data-modal="picture-proof-modal">
+    <div class="modal-close js-close-modal hide-on-phone"
+         onclick="document.getElementById('picture-proof-modal').setAttribute('data-modal-state', 'closed');">
+        <img class="svg" src="/images/new_images/modal-close.svg" loading="lazy" alt="order laundry window">
+    </div>
+    <div class="modal">
+        <div class="modal-close js-close-modal only-on-phone"
+             onclick="document.getElementById('picture-proof-modal').setAttribute('data-modal-state', 'closed');">
+            <img class="svg" src="/images/new_images/modal-close.svg" alt="order laundry window" loading="lazy"
+                 style="filter: invert(.5);width: 30px;padding: 0 5px 0 5px;position: relative;top: -10px;left: 10px;">
+        </div>
+        <div class="modal-header">
+            <h3 id="success_message">Picture Proof preview</h3>
+        </div>
+        <div class="modal-body" style="padding: 5px; text-align: left;">
+            <div><strong>Date/Time: </strong><span id="picture_proof_created_at">zzz</span></div>
+            <div id="picture_proof_image"></div>
+        </div> <!-- End of Modal-body -->
+    </div>
+</div>
